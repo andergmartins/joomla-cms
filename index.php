@@ -10,15 +10,6 @@
 define('_JEXEC', 1);
 
 
-// Check PHP version
-if (!function_exists('version_compare') || version_compare(PHP_VERSION, '5.3.0', '<')) {
-	$msg = 'You can not run Joomla 3.x with your current PHP version (%s).'."\n".
-	       'Please, update PHP at least to 5.3.0, or contact you host manager.';
-	echo sprintf($msg, PHP_VERSION);
-	die;
-}
-
-
 if (file_exists(dirname(__FILE__) . '/defines.php')) {
 	include_once dirname(__FILE__) . '/defines.php';
 }
