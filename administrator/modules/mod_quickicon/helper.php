@@ -47,55 +47,55 @@ abstract class modQuickIconHelper
 				self::$buttons[$key] = array(
 					array(
 						'link' => JRoute::_('index.php?option=com_content&task=article.add'),
-						'image' => 'plus-sign',
+						'image' => 'file-add',
 						'text' => JText::_('MOD_QUICKICON_ADD_NEW_ARTICLE'),
 						'access' => array('core.manage', 'com_content', 'core.create', 'com_content', )
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_content'),
-						'image' => 'pencil',
+						'image' => 'pencil-2',
 						'text' => JText::_('MOD_QUICKICON_ARTICLE_MANAGER'),
 						'access' => array('core.manage', 'com_content')
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_categories&extension=com_content'),
-						'image' => 'folder-open',
+						'image' => 'folder',
 						'text' => JText::_('MOD_QUICKICON_CATEGORY_MANAGER'),
 						'access' => array('core.manage', 'com_content')
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_media'),
-						'image' => 'picture',
+						'image' => 'pictures',
 						'text' => JText::_('MOD_QUICKICON_MEDIA_MANAGER'),
 						'access' => array('core.manage', 'com_media')
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_menus'),
-						'image' => 'list-alt',
+						'image' => 'list-view',
 						'text' => JText::_('MOD_QUICKICON_MENU_MANAGER'),
 						'access' => array('core.manage', 'com_menus')
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_users'),
-						'image' => 'user',
+						'image' => 'address',
 						'text' => JText::_('MOD_QUICKICON_USER_MANAGER'),
 						'access' => array('core.manage', 'com_users')
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_modules'),
-						'image' => 'th-large',
+						'image' => 'cube',
 						'text' => JText::_('MOD_QUICKICON_MODULE_MANAGER'),
 						'access' => array('core.manage', 'com_modules')
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_installer'),
-						'image' => 'download-alt',
+						'image' => 'puzzle',
 						'text' => JText::_('MOD_QUICKICON_EXTENSION_MANAGER'),
 						'access' => array('core.manage', 'com_installer')
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_languages'),
-						'image' => 'comment',
+						'image' => 'comments-2',
 						'text' => JText::_('MOD_QUICKICON_LANGUAGE_MANAGER'),
 						'access' => array('core.manage', 'com_languages')
 					),
@@ -107,13 +107,13 @@ abstract class modQuickIconHelper
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_templates'),
-						'image' => 'tint',
+						'image' => 'eye',
 						'text' => JText::_('MOD_QUICKICON_TEMPLATE_MANAGER'),
 						'access' => array('core.manage', 'com_templates')
 					),
 					array(
 						'link' => JRoute::_('index.php?option=com_admin&task=profile.edit&id='.JFactory::getUser()->id),
-						'image' => 'eye-open',
+						'image' => 'vcard',
 						'text' => JText::_('MOD_QUICKICON_PROFILE'),
 						'access' => true
 					),

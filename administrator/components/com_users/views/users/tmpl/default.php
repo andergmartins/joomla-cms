@@ -144,8 +144,8 @@ $loggeduser = JFactory::getUser();
 								<?php echo $this->escape($item->name); ?>
 							<?php endif; ?>
 							<?php if (JDEBUG) : ?>
-								<div class="pull-right"><div class="button2-left smallsub"><div class="blank"><a href="<?php echo JRoute::_('index.php?option=com_users&view=debuguser&user_id='.(int) $item->id);?>">
-								<?php echo JText::_('COM_USERS_DEBUG_USER');?></a></div></div></div>
+								<div class="small"><a href="<?php echo JRoute::_('index.php?option=com_users&view=debuguser&user_id='.(int) $item->id);?>">
+								<?php echo JText::_('COM_USERS_DEBUG_USER');?></a></div>
 							<?php endif; ?>
 						</td>
 						<td class="center">
@@ -192,10 +192,10 @@ $loggeduser = JFactory::getUser();
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		
+
 			<?php //Load the batch processing form. ?>
 			<?php echo $this->loadTemplate('batch'); ?>
-		
+
 			<div>
 				<input type="hidden" name="task" value="" />
 				<input type="hidden" name="boxchecked" value="0" />

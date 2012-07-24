@@ -22,14 +22,17 @@ $clientId	= $this->state->get('filter.client_id', 0);
 		<div id="sidebar" class="span2">
 			<div class="sidebar-nav">
 				<?php
+					// Very crude workaround to bring in the submenu since setBuffer doesn't work using this method...
+					echo $this->loadTemplate('navigation');
+
 					// Display the submenu position modules
-					$this->modules = JModuleHelper::getModules('submenu');
+					/* $this->modules = JModuleHelper::getModules('submenu');
 					foreach ($this->modules as $module) {
 						$output = JModuleHelper::renderModule($module);
 						$params = new JRegistry;
 						$params->loadString($module->params);
 						echo $output;
-					}
+					} */
 				?>
 				<hr />
 			</div>
@@ -40,7 +43,7 @@ $clientId	= $this->state->get('filter.client_id', 0);
 			<?php if ($this->ftp): ?>
 				<?php echo $this->loadTemplate('ftp');?>
 			<?php endif; ?>
-		
+
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -124,7 +127,7 @@ $clientId	= $this->state->get('filter.client_id', 0);
 				<?php endforeach;?>
 				</tbody>
 			</table>
-		
+
 			<div>
 				<input type="hidden" name="task" value="" />
 				<input type="hidden" name="boxchecked" value="0" />

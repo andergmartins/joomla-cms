@@ -17,7 +17,7 @@
 @import "../../../../media/jui/less/tables.less";
 
 // Components: common
-@import "../../../../media/jui/less/sprites.less";
+// @import "../../../../media/jui/less/sprites.less";
 @import "../../../../media/jui/less/dropdowns.less";
 @import "../../../../media/jui/less/wells.less";
 @import "../../../../media/jui/less/component-animations.less";
@@ -78,6 +78,9 @@
 
 // Extended for JUI
 @import "../../../../media/jui/less/bootstrap-extended.less"; // Has to be last to override when necessary
+
+// Icon Font
+@import "icomoon.less";
 
 /* Body */
 html {
@@ -309,9 +312,6 @@ body .navbar-fixed-top{
 	.btn-toolbar,p{
 		margin: 0px;
 	}
-	i{
-		.opacity(40)
-	}
 	a{
 		color: #999999;
 	}
@@ -364,6 +364,13 @@ body .navbar-fixed-top{
 .btn-inverse.active {
 	color: rgba(255,255,255,.95);
 }
+
+/* Chosen Max Width */
+.chzn-container,
+.chzn-drop{
+	max-width: 100% !important;
+}
+
 @media (min-width: 980px) {
 	body {
 	    padding-top: 30px;

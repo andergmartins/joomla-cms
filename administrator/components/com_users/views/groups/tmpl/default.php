@@ -75,7 +75,7 @@ JText::script('COM_USERS_GROUPS_CONFIRM_DELETE');
 				</div>
 			</div>
 			<div class="clearfix"> </div>
-		
+
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -125,8 +125,8 @@ JText::script('COM_USERS_GROUPS_CONFIRM_DELETE');
 								<?php echo $this->escape($item->title); ?>
 							<?php endif; ?>
 							<?php if (JDEBUG) : ?>
-								<div class="fltrt"><div class="button2-left smallsub"><div class="blank"><a href="<?php echo JRoute::_('index.php?option=com_users&view=debuggroup&group_id='.(int) $item->id);?>">
-								<?php echo JText::_('COM_USERS_DEBUG_GROUP');?></a></div></div></div>
+								<div class="small"><a href="<?php echo JRoute::_('index.php?option=com_users&view=debuggroup&group_id='.(int) $item->id);?>">
+								<?php echo JText::_('COM_USERS_DEBUG_GROUP');?></a></div>
 							<?php endif; ?>
 						</td>
 						<td class="center">
@@ -139,7 +139,7 @@ JText::script('COM_USERS_GROUPS_CONFIRM_DELETE');
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		
+
 			<div>
 				<input type="hidden" name="task" value="" />
 				<input type="hidden" name="boxchecked" value="0" />

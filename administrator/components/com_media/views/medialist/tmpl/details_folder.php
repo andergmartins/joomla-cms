@@ -13,7 +13,7 @@ $user = JFactory::getUser();
 		<tr>
 			<td class="imgTotal">
 				<a href="index.php?option=com_media&amp;view=mediaList&amp;tmpl=component&amp;folder=<?php echo $this->_tmp_folder->path_relative; ?>" target="folderframe">
-					<i class="icon-folder-open"></i></a>
+					<i class="icon-folder-2"></i></a>
 			</td>
 			<td class="description">
 				<a href="index.php?option=com_media&amp;view=mediaList&amp;tmpl=component&amp;folder=<?php echo $this->_tmp_folder->path_relative; ?>" target="folderframe"><?php echo $this->_tmp_folder->name; ?></a>

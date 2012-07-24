@@ -74,7 +74,7 @@ abstract class JHtmlGrid
 	public static function sort($title, $order, $direction = 'asc', $selected = 0, $task = null, $new_direction = 'asc')
 	{
 		$direction = strtolower($direction);
-		$icon = array('chevron-down', 'chevron-up');
+		$icon = array('arrow-down', 'arrow-up');
 		$index = intval($direction == 'desc');
 
 		if ($order != $selected)
@@ -92,7 +92,7 @@ abstract class JHtmlGrid
 
 		if ($order == $selected)
 		{
-			$html .= '<i class="icon-'.$icon[$index].'"></i>';
+			$html .= ' <i class="icon-'.$icon[$index].'"></i>';
 		}
 
 		$html .= '</a>';

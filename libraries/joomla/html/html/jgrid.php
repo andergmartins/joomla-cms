@@ -89,7 +89,7 @@ abstract class JHtmlJGrid
 			$html[] = ' title="' . addslashes(htmlspecialchars($translate ? JText::_($inactive_title) : $inactive_title, ENT_COMPAT, 'UTF-8')) . '">';
 			if ($active_class == "protected")
 			{
-				$html[] = '<span class="btn btn-micro btn-warning">';
+				$html[] = '<span class="btn disabled btn-micro btn-warning">';
 				$html[] = '<i class="icon-lock icon-white"></i>';
 				$html[] = '</span>';
 			}
@@ -259,8 +259,8 @@ abstract class JHtmlJGrid
 		}
 
 		$states = array(
-			1 => array('unsetDefault', 'JDEFAULT', 'JLIB_HTML_UNSETDEFAULT_ITEM', 'JDEFAULT', false, 'default', 'default'),
-			0 => array('setDefault', '', 'JLIB_HTML_SETDEFAULT_ITEM', '', false, 'notdefault', 'notdefault'),
+			1 => array('unsetDefault', 'JDEFAULT', 'JLIB_HTML_UNSETDEFAULT_ITEM', 'JDEFAULT', false, 'star', 'star'),
+			0 => array('setDefault', '', 'JLIB_HTML_SETDEFAULT_ITEM', '', false, 'star-empty', 'star-empty'),
 		);
 
 		return self::state($states, $value, $i, $prefix, $enabled, true, $checkbox);

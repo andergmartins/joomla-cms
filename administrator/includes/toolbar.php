@@ -155,7 +155,7 @@ abstract class JToolBarHelper
 	{
 		$bar = JToolBar::getInstance('toolbar');
 		// Add a default button.
-		$bar->appendButton('Standard', 'default', $alt, $task, true);
+		$bar->appendButton('Standard', 'star', $alt, $task, true);
 	}
 
 	/**

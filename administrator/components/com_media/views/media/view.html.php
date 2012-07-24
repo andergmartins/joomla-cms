@@ -128,24 +128,24 @@ class MediaViewMedia extends JViewLegacy
 
 		// Set the titlebar text
 		JToolBarHelper::title(JText::_('COM_MEDIA'), 'mediamanager.png');
-		
+
 		// Add a upload button
 		if ($user->authorise('core.create', 'com_media'))
 		{
 			$title = JText::_('JTOOLBAR_UPLOAD');
 			$dhtml = "<button data-toggle=\"collapse\" data-target=\"#collapseUpload\" class=\"btn btn-primary\">
-						<i class=\"icon-plus icon-white\" title=\"$title\"></i> 
+						<i class=\"icon-plus icon-white\" title=\"$title\"></i>
 						$title</button>";
 			$bar->appendButton('Custom', $dhtml, 'upload');
 			JToolBarHelper::divider();
 		}
-		
+
 		// Add a create folder button
 		if ($user->authorise('core.create', 'com_media'))
 		{
 			$title = JText::_('COM_MEDIA_CREATE_FOLDER');
 			$dhtml = "<button data-toggle=\"collapse\" data-target=\"#collapseFolder\" class=\"btn\">
-						<i class=\"icon-folder-open\" title=\"$title\"></i> 
+						<i class=\"icon-folder\" title=\"$title\"></i>
 						$title</button>";
 			$bar->appendButton('Custom', $dhtml, 'folder');
 			JToolBarHelper::divider();
@@ -156,7 +156,7 @@ class MediaViewMedia extends JViewLegacy
 		{
 			$title = JText::_('JTOOLBAR_DELETE');
 			$dhtml = "<button href=\"#\" onclick=\"MediaManager.submit('folder.delete')\" class=\"btn\">
-						<i class=\"icon-remove\" title=\"$title\"></i> 
+						<i class=\"icon-remove\" title=\"$title\"></i>
 						$title</button>";
 			$bar->appendButton('Custom', $dhtml, 'delete');
 			JToolBarHelper::divider();
