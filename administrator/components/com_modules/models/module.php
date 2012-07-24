@@ -803,7 +803,7 @@ class ModulesModelModule extends JModelAdmin
 		$client		= JApplicationHelper::getClientInfo($clientId);
 		$formFile	= JPath::clean($client->path.'/modules/'.$module.'/'.$module.'.xml');
 
-		// Load the core and/or local language file(s).
+		// Load the core and/or local language filese(s).
 			$lang->load($module, $client->path, null, false, false)
 		||	$lang->load($module, $client->path.'/modules/'.$module, null, false, false)
 		||	$lang->load($module, $client->path, $lang->getDefault(), false, false)
@@ -835,6 +835,10 @@ class ModulesModelModule extends JModelAdmin
 			}
 
 		}
+
+		// Load the default advanced params
+		JForm::addFormPath(JPATH_ADMINISTRATOR.'components/com_modules/models/forms');
+		$form->loadFile('advanced', false);
 
 		// Trigger the default form events.
 		parent::preprocessForm($form, $data, $group);
