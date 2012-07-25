@@ -9,16 +9,6 @@
 
 defined('_JEXEC') or die;
 
-/* Initial Variables */
-$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
-$showtitle       = $module->showtitle != 0;
-$module_tag      = $params->get('module_tag');
-$header_class    = $params->get('header_class');
-$header_class    = (!empty($header_class))?' class="'.$header_class.'"':'';
-$header_tag      = htmlspecialchars($params->get('header_tag'));
-$bootstrap_size  = $params->get('bootstrap_size');
-$header_class    = (!empty($header_class))?' span'.$bootstrap_size.'':'';
-
 /*
  * none (output raw module content)
  */
@@ -32,10 +22,18 @@ function modChrome_none($module, &$params, &$attribs)
  */
 function modChrome_html5($module, &$params, &$attribs)
 {
+	$module_tag      = $params->get('module_tag');
+	$header_class    = $params->get('header_class');
+	$header_class    = (!empty($header_class))?' class="'.$header_class.'"':'';
+	$header_tag      = htmlspecialchars($params->get('header_tag'));
+	$bootstrap_size  = $params->get('bootstrap_size');
+	$header_class    = (!empty($header_class))?' span'.$bootstrap_size.'':'';
+	$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+
 	if (!empty ($module->content)) : ?>
 		<<?php echo $module_tag; ?> class="moduletable<?php echo $moduleclass_sfx; ?> <?php echo $header_class; ?>">
-		<?php if ($showtitle) : ?>
-			<<?php echo $heading_tag; ?> <?php echo $header_class; ?>><?php echo $module->title; ?> </<?php echo $heading_tag ?>>
+		<?php if ((bool)$module->showtitle) : ?>
+			<<?php echo $header_tag; ?> <?php echo $header_class; ?>><?php echo $module->title; ?> </<?php echo $header_tag ?>>
 		<?php endif; ?>
 			<?php echo $module->content; ?>
 		</<?php echo $module_tag; ?>>
@@ -47,8 +45,8 @@ function modChrome_html5($module, &$params, &$attribs)
  */
 function modChrome_table($module, &$params, &$attribs)
 { ?>
-	<table cellpadding="0" cellspacing="0" class="moduletable<?php echo $moduleclass_sfx; ?>">
-	<?php if ($showtitle) : ?>
+	<table cellpadding="0" cellspacing="0" class="moduletable<?php echo htmlspecialchars($params->get('moduleclass_sfx')); ?>">
+	<?php if ((bool)$module->showtitle) : ?>
 		<tr>
 			<th>
 				<?php echo $module->title; ?>
@@ -85,8 +83,8 @@ function modChrome_horz($module, &$params, &$attribs)
 function modChrome_xhtml($module, &$params, &$attribs)
 {
 	if (!empty ($module->content)) : ?>
-		<div class="moduletable<?php echo $moduleclass_sfx; ?>">
-		<?php if ($showtitle) : ?>
+		<div class="moduletable<?php echo htmlspecialchars($params->get('moduleclass_sfx')); ?>">
+		<?php if ((bool)$module->showtitle) : ?>
 			<h3><?php echo $module->title; ?></h3>
 		<?php endif; ?>
 			<?php echo $module->content; ?>
@@ -99,11 +97,11 @@ function modChrome_xhtml($module, &$params, &$attribs)
  */
 function modChrome_rounded($module, &$params, &$attribs)
 { ?>
-		<div class="module<?php echo $moduleclass_sfx; ?>">
+		<div class="module<?php echo htmlspecialchars($params->get('moduleclass_sfx')); ?>">
 			<div>
 				<div>
 					<div>
-						<?php if ($showtitle) : ?>
+						<?php if ((bool)$module->showtitle) : ?>
 							<h3><?php echo $module->title; ?></h3>
 						<?php endif; ?>
 					<?php echo $module->content; ?>
