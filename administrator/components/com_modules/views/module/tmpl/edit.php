@@ -147,6 +147,9 @@ JFactory::getDocument()->addScriptDeclaration($script);
 		  					</div>
 		  				</div>
 
+						<?php echo $this->form->getInput('module'); ?>
+						<?php echo $this->form->getInput('client_id'); ?></li>
+
 		  		</div>
 		  		<div class="span6">
 		  			<?php if ($this->item->xml) : ?>
