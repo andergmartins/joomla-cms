@@ -153,7 +153,6 @@ abstract class JModuleHelper
 		// Get module parameters
 		$params = new JRegistry;
 		$params->loadString($module->params);
-		//var_dump($params);
 
 		// Get the template
 		$template = $app->getTemplate();
