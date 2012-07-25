@@ -30,16 +30,6 @@ if (!file_exists(JPATH_CONFIGURATION.'/configuration.php') || (filesize(JPATH_CO
 }
 
 //
-// Check PHP version
-//
-if (!function_exists('version_compare') || version_compare(PHP_VERSION, '5.3.1', '<')) {
-	$msg = 'You can not run Joomla 3.x with your current PHP version (%s).'."\n".
-	       'Please, update PHP at least to 5.3.1, or contact you host manager.';
-	echo sprintf($msg, PHP_VERSION);
-	exit();
-}
-
-//
 // Joomla system startup.
 //
 
