@@ -837,7 +837,7 @@ class ModulesModelModule extends JModelAdmin
 		}
 
 		// Load the default advanced params
-		JForm::addFormPath(JPATH_ADMINISTRATOR.'components/com_modules/models/forms');
+		JForm::addFormPath(JPATH_ADMINISTRATOR.'/components/com_modules/models/forms');
 		$form->loadFile('advanced', false);
 
 		// Trigger the default form events.
