@@ -9,20 +9,35 @@
 
 defined('_JEXEC') or die;
 
+require_once JPATH_ADMINISTRATOR.'/components/com_templates/helpers/templates.php';
+
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
-$clientId	= $this->state->get('filter.client_id');
-$state		= $this->state->get('filter.state');
-$this->template		=  ModulesHelper::getTemplates($clientId, $state);
-$this->items			=	ModulesHelper::getPositions($clientId);
-?>
-<select id="jform_position" name="jform[position]">
-	<?php foreach ($this->template as $value=>$templates) : ?>
-	<optgroup label="<?php echo JText::_($value);?>">
-	  <?php foreach ($this->items as $templates) : ?>
-		  	<?php foreach ($templates as $template):?>
-	    		<option value="<?php echo $template;?>"><?php echo $template;?></option>
-	    <?php endforeach; ?>
-	  <?php endforeach; ?>
-  	 </optgroup>
-  	 <?php endforeach; ?>
-</select>
+$clientId       = $this->state->get('filter.client_id');
+$state          = $this->state->get('filter.state');
+$templates      = array_keys(ModulesHelper::getTemplates($clientId, $state));
+$templateGroups = array();
+
+foreach ($templates as $template)
+{
+	$group = array();
+	$group['value'] = $template;
+	$group['text'] = $template;
+	$group['items'] = array();
+
+	$positions = TemplatesHelper::getPositions($clientId, $template);
+	foreach ($positions as $position)
+	{
+		$option = new stdClass();
+		$option->value = $position;
+		$option->text = $position;
+
+		$group['items'][] = $option;
+	}
+
+	$templateGroups[$template] = $group;
+}
+
+echo JHtml::_(
+				'select.groupedlist', $templateGroups, 'jform[position]',
+				array('id' => 'jform_position', 'list.select' => $this->item->position)
+			);
