@@ -22,22 +22,25 @@ function modChrome_none($module, &$params, &$attribs)
  */
 function modChrome_html5($module, &$params, &$attribs)
 {
-	$module_tag      = $params->get('module_tag');
-	$header_class    = $params->get('header_class');
-	$header_class    = (!empty($header_class))?' class="'.$header_class.'"':'';
-	$header_tag      = htmlspecialchars($params->get('header_tag'));
-	$bootstrap_size  = $params->get('bootstrap_size');
-	$header_class    = (!empty($header_class))?' span'.$bootstrap_size.'':'';
-	$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+    $moduleTag      = $params->get('module_tag');
+    $headerTag      = htmlspecialchars($params->get('header_tag'));
+    $headerClass    = $params->get('header_class');
+    $bootstrapSize  = $params->get('bootstrap_size');
+    $moduleClass    = !empty($bootstrapSize) ? ' span' . (int)$bootstrapSize . '' : '';
+    $moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
-	if (!empty ($module->content)) : ?>
-		<<?php echo $module_tag; ?> class="moduletable<?php echo $moduleclass_sfx; ?> <?php echo $header_class; ?>">
-		<?php if ((bool)$module->showtitle) : ?>
-			<<?php echo $header_tag; ?> <?php echo $header_class; ?>><?php echo $module->title; ?> </<?php echo $header_tag ?>>
-		<?php endif; ?>
-			<?php echo $module->content; ?>
-		</<?php echo $module_tag; ?>>
-	<?php endif;
+    if (!empty ($module->content)) {
+        $html  = "<{$moduleTag} class=\"moduletable{$moduleClassSfx} {$moduleClass}\">";
+
+        if ((bool)$module->showtitle) {
+            $html .= "<{$headerTag} class=\"{$headerClass}\">{$module->title}</{$headerTag}>";
+        }
+
+        $html .= $module->content;
+        $html .= "</{$moduleTag}>";
+
+        echo $html;
+    }
 }
 
 /*
