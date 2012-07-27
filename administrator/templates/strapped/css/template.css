@@ -4871,6 +4871,10 @@ fieldset.radio.btn-group {
 .input-prepend .chzn-container-single .chzn-drop {
   border-color: #CCC;
 }
+.input-prepend > .add-on,
+.input-append > .add-on {
+  vertical-align: top;
+}
 @font-face {
   font-family: 'IcoMoon';
   src: url('../../../../media/jui/fonts/IcoMoon.eot');
@@ -4960,6 +4964,7 @@ fieldset.radio.btn-group {
 .icon-pictures:before {
   content: "\30";
 }
+.icon-list:before,
 .icon-list-view:before {
   content: "\31";
 }
@@ -4981,6 +4986,7 @@ fieldset.radio.btn-group {
 .icon-cogs:before {
   content: "\37";
 }
+.icon-options:before,
 .icon-cog:before {
   content: "\38";
 }
@@ -5337,6 +5343,7 @@ body {
 }
 /* Login */
 .view-login {
+  padding-top: 0;
   background-color: #142849;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#165387), to(#142849));
   background-image: -webkit-radial-gradient(circle, #165387, #142849);
@@ -5376,6 +5383,9 @@ body {
   text-indent: -9999px;
   background: url('../images/login-joomla.png') no-repeat;
   margin-left: -20px;
+}
+.view-login .navbar-fixed-bottom {
+  position: absolute;
 }
 .login .chzn-drop {
   width: 228px !important;

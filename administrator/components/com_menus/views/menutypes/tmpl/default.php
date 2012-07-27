@@ -25,71 +25,42 @@ $tmpl = JRequest::getCmd('tmpl', '');
 	}
 </script>
 
-<h4 class="modal-title"><?php echo JText::_('COM_MENUS_TYPE_CHOOSE'); ?></h2>
-
-<!-- Begin Accordions -->
-<div class="accordion" id="collapseTypes">
-	<?php 
+<h4 class="modal-title"><?php echo JText::_('COM_MENUS_TYPE_CHOOSE'); ?></h4>
+<hr />
+<?php echo JHtml::_('bootstrap.startAccordion', 'collapseTypes', array('active' => 'slide1')); ?>
+	<?php
 		$i = 0;
 		foreach ($this->types as $name => $list): ?>
-		<!-- Begin Accordion Group -->
-		<div class="accordion-group">
-			<div class="accordion-heading">
-				<h4>
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#collapseTypes" href="#collapse<?php echo $i++; ?>">
-						<?php echo JText::_($name); ?>
-					</a>
-				</h4>
-			</div>
-			<div id="collapse<?php echo $i+-1; ?>" class="accordion-body collapse">
-				<div class="accordion-inner">
-					<ul class="nav nav-list">
-						<?php foreach ($list as $item): ?>
-							<li>
-								<a class="choose_type" href="#" rel="tooltip" title="<?php echo JText::_($item->description); ?>"
-									onclick="javascript:setmenutype('<?php echo base64_encode(json_encode(array('id' => $this->recordId, 'title' => $item->title, 'request' => $item->request))); ?>')">
-									<?php echo JText::_($item->title);?>
-								</a>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- End Accordion Group -->
+		<?php echo JHtml::_('bootstrap.addSlide', 'collapseTypes', JText::_($name), 'collapse' . $i++); ?>
+			<ul class="nav nav-list">
+				<?php foreach ($list as $item): ?>
+					<li>
+						<a class="choose_type" href="#" rel="tooltip" title="<?php echo JText::_($item->description); ?>"
+							onclick="javascript:setmenutype('<?php echo base64_encode(json_encode(array('id' => $this->recordId, 'title' => $item->title, 'request' => $item->request))); ?>')">
+							<?php echo JText::_($item->title);?>
+						</a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+		<?php echo JHtml::_('bootstrap.endSlide'); ?>
 	<?php endforeach; ?>
-	
-	<!-- Begin Accordion Group -->
-	<div class="accordion-group">
-		<div class="accordion-heading">
-			<h4>
-				<a class="accordion-toggle" data-toggle="collapse" data-parent="#collapseTypes" href="#collapseSystem">
-					<?php echo JText::_('COM_MENUS_TYPE_SYSTEM'); ?>
+	<?php echo JHtml::_('bootstrap.addSlide', 'collapseTypes', JText::_('COM_MENUS_TYPE_SYSTEM'), 'collapse-system'); ?>
+		<ul class="nav nav-list">
+			<li><a class="choose_type" href="#" title="<?php echo JText::_('COM_MENUS_TYPE_EXTERNAL_URL_DESC'); ?>"
+					onclick="javascript:setmenutype('<?php echo base64_encode(json_encode(array('id' => $this->recordId, 'title'=>'url'))); ?>')">
+					<?php echo JText::_('COM_MENUS_TYPE_EXTERNAL_URL'); ?>
 				</a>
-			</h4>
-		</div>
-		<div id="collapseSystem" class="accordion-body collapse">
-			<div class="accordion-inner">
-				<ul class="nav nav-list">
-					<li><a class="choose_type" href="#" title="<?php echo JText::_('COM_MENUS_TYPE_EXTERNAL_URL_DESC'); ?>"
-							onclick="javascript:setmenutype('<?php echo base64_encode(json_encode(array('id' => $this->recordId, 'title'=>'url'))); ?>')">
-							<?php echo JText::_('COM_MENUS_TYPE_EXTERNAL_URL'); ?>
-						</a>
-					</li>
-					<li><a class="choose_type" href="#" title="<?php echo JText::_('COM_MENUS_TYPE_ALIAS_DESC'); ?>"
-							onclick="javascript:setmenutype('<?php echo base64_encode(json_encode(array('id' => $this->recordId, 'title'=>'alias'))); ?>')">
-							<?php echo JText::_('COM_MENUS_TYPE_ALIAS'); ?>
-						</a>
-					</li>
-					<li><a class="choose_type" href="#"  title="<?php echo JText::_('COM_MENUS_TYPE_SEPARATOR_DESC'); ?>"
-							onclick="javascript:setmenutype('<?php echo base64_encode(json_encode(array('id' => $this->recordId, 'title'=>'separator'))); ?>')">
-							<?php echo JText::_('COM_MENUS_TYPE_SEPARATOR'); ?>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- End Accordion Group -->
-</div>
-<!-- End Accordions -->
+			</li>
+			<li><a class="choose_type" href="#" title="<?php echo JText::_('COM_MENUS_TYPE_ALIAS_DESC'); ?>"
+					onclick="javascript:setmenutype('<?php echo base64_encode(json_encode(array('id' => $this->recordId, 'title'=>'alias'))); ?>')">
+					<?php echo JText::_('COM_MENUS_TYPE_ALIAS'); ?>
+				</a>
+			</li>
+			<li><a class="choose_type" href="#"  title="<?php echo JText::_('COM_MENUS_TYPE_SEPARATOR_DESC'); ?>"
+					onclick="javascript:setmenutype('<?php echo base64_encode(json_encode(array('id' => $this->recordId, 'title'=>'separator'))); ?>')">
+					<?php echo JText::_('COM_MENUS_TYPE_SEPARATOR'); ?>
+				</a>
+			</li>
+		</ul>
+	<?php echo JHtml::_('bootstrap.endSlide'); ?>
+<?php echo JHtml::_('bootstrap.endAccordion'); ?>

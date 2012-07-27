@@ -647,8 +647,8 @@ abstract class JHtmlBehavior
 			return;
 		}
 
-		JHtml::_('stylesheet', JURI::root() . 'templates/system/css/colorpicker.css', array('media' => 'all'), true);
-		JHtml::_('script', JURI::root() . 'templates/system/js/bootstrap-colorpicker.js', false, true);
+		JHtml::_('stylesheet', JURI::root() . 'media/jui/css/colorpicker.css', array('media' => 'all'), true);
+		JHtml::_('script', JURI::root() . 'media/jui/js/bootstrap-colorpicker.js', false, true);
 
 		JFactory::getDocument()
 			->addScriptDeclaration(

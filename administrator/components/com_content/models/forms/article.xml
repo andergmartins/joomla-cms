@@ -101,7 +101,7 @@
 			readonly="true" filter="unset" />
 
 		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
-			description="COM_CONTENT_FIELD_LANGUAGE_DESC" class="inputbox"
+			description="COM_CONTENT_FIELD_LANGUAGE_DESC" class="span12 small"
 		>
 			<option value="*">JALL</option>
 		</field>
@@ -630,11 +630,6 @@
 				size="20" />
 	</fields>
 	<fields name="urls">
-		<field
-			name="spacer3"
-			type="spacer"
-			hr="true"
-			/>
 			<field
 				name="urla"
 				type="url"
@@ -663,7 +658,7 @@
 				<option value="3">JBROWSERTARGET_MODAL</option>
 			</field>
 			<field
-				name="spacer4"
+				name="spacer3"
 				type="spacer"
 				hr="true"
 				/>
@@ -695,7 +690,7 @@
 					<option value="3">JBROWSERTARGET_MODAL</option>
 			</field>
 			<field
-				name="spacer5"
+				name="spacer4"
 				type="spacer"
 				hr="true"
 				/>

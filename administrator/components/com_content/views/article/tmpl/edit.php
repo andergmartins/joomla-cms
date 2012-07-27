@@ -74,9 +74,6 @@ endif;
 				<?php if ( $this->canDo->get('core.admin')   ):  ?>
 					<li><a href="#editor" data-toggle="tab"><?php echo JText::_('COM_CONTENT_SLIDER_EDITOR_CONFIG');?></a></li>
 				<?php endif ?>
-			  <?php if ($params['show_urls_images_backend']): ?>
-			 	 <li><a href="#images" data-toggle="tab"><?php echo JText::_('COM_CONTENT_FIELDSET_URLS_AND_IMAGES');?></a></li>
-			  <?php endif ?>
 			  <li><a href="#metadata" data-toggle="tab"><?php echo JText::_('JGLOBAL_FIELDSET_METADATA_OPTIONS');?></a></li>
 			  <?php if ($this->canDo->get('core.admin')): ?>
 			 	 <li><a href="#permissions" data-toggle="tab"><?php echo JText::_('COM_CONTENT_FIELDSET_RULES');?></a></li>
@@ -92,117 +89,157 @@ endif;
 						</div>
 						<?php echo $this->form->getInput('articletext'); ?>
 					</fieldset>
+					<?php 
+						// The url and images fields only show if the configuration is set to allow them. This is for legacy reasons. 
+					?>
+					<?php if ($params['show_urls_images_backend']): ?>
+						<div class="row-fluid">
+							<div class="span6">
+								<h4><?php echo JText::_('COM_CONTENT_FIELDSET_URLS_AND_IMAGES');?></h4>
+								<div class="control-group">
+									<div class="control-label">
+										<?php echo $this->form->getLabel('images'); ?>
+									</div>
+									<div class="controls">
+										<?php echo $this->form->getInput('images'); ?>
+									</div>
+								</div>
+								<?php foreach($this->form->getGroup('images') as $field): ?>
+									<div class="control-group">
+										<?php if (!$field->hidden): ?>
+											<div class="control-label">
+												<?php echo $field->label; ?>
+											</div>
+										<?php endif; ?>
+										<div class="controls">
+											<?php echo $field->input; ?>
+										</div>
+									</div>
+								<?php endforeach; ?>
+							</div>
+							<div class="span6">
+								<?php foreach($this->form->getGroup('urls') as $field): ?>
+									<div class="control-group">
+										<?php if (!$field->hidden): ?>
+											<div class="control-label">
+												<?php echo $field->label; ?>
+											</div>
+										<?php endif; ?>
+										<div class="controls">
+											<?php echo $field->input; ?>
+										</div>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						</div>
+					<?php endif; ?>
 				</div>
 				
 				<?php // Do not show the publishing options if the edit form is configured not to. ?>
 					<?php  if ($params['show_publishing_options'] || ( $params['show_publishing_options'] = '' && !empty($editoroptions)) ): ?>
 						<div class="tab-pane" id="publishing">
-							<fieldset>
-								<div class="control-group">
-									<div class="control-label">
-										<?php echo $this->form->getLabel('alias'); ?>
-									</div>
-									<div class="controls">
-										<?php echo $this->form->getInput('alias'); ?>
-									</div>
-								</div>
-								<div class="control-group">
-									<div class="control-label">
-										<?php echo $this->form->getLabel('language'); ?>
-									</div>
-									<div class="controls">
-										<?php echo $this->form->getInput('language'); ?>
-									</div>
-								</div>
-								<div class="control-group">
-									<div class="control-label">
-										<?php echo $this->form->getLabel('id'); ?>
-									</div>
-									<div class="controls">
-										<?php echo $this->form->getInput('id'); ?>
-									</div>
-								</div>
-								<div class="control-group">
-									<div class="control-label">
-										<?php echo $this->form->getLabel('created_by'); ?>
-									</div>
-									<div class="controls">
-										<?php echo $this->form->getInput('created_by'); ?>
-									</div>
-								</div>
-								<div class="control-group">
-									<div class="control-label">
-										<?php echo $this->form->getLabel('created_by_alias'); ?>
-									</div>
-									<div class="controls">
-										<?php echo $this->form->getInput('created_by_alias'); ?>
-									</div>
-								</div>
-								<div class="control-group">
-									<div class="control-label">
-										<?php echo $this->form->getLabel('created'); ?>
-									</div>
-									<div class="controls">
-										<?php echo $this->form->getInput('created'); ?>
-									</div>
-								</div>
-								<div class="control-group">
-									<div class="control-label">
-										<?php echo $this->form->getLabel('publish_up'); ?>
-									</div>
-									<div class="controls">
-										<?php echo $this->form->getInput('publish_up'); ?>
-									</div>
-								</div>
-								<div class="control-group">
-									<div class="control-label">
-										<?php echo $this->form->getLabel('publish_down'); ?>
-									</div>
-									<div class="controls">
-										<?php echo $this->form->getInput('publish_down'); ?>
-									</div>
-								</div>
-								<?php if ($this->item->modified_by) : ?>
+							<div class="row-fluid">
+								<div class="span6">
 									<div class="control-group">
 										<div class="control-label">
-											<?php echo $this->form->getLabel('modified_by'); ?>
+											<?php echo $this->form->getLabel('alias'); ?>
 										</div>
 										<div class="controls">
-											<?php echo $this->form->getInput('modified_by'); ?>
+											<?php echo $this->form->getInput('alias'); ?>
 										</div>
 									</div>
 									<div class="control-group">
 										<div class="control-label">
-											<?php echo $this->form->getLabel('modified'); ?>
+											<?php echo $this->form->getLabel('id'); ?>
 										</div>
 										<div class="controls">
-											<?php echo $this->form->getInput('modified'); ?>
+											<?php echo $this->form->getInput('id'); ?>
 										</div>
 									</div>
-								<?php endif; ?>
-				
-								<?php if ($this->item->version) : ?>
 									<div class="control-group">
 										<div class="control-label">
-											<?php echo $this->form->getLabel('version'); ?>
+											<?php echo $this->form->getLabel('created_by'); ?>
 										</div>
 										<div class="controls">
-											<?php echo $this->form->getInput('version'); ?>
+											<?php echo $this->form->getInput('created_by'); ?>
 										</div>
 									</div>
-								<?php endif; ?>
-				
-								<?php if ($this->item->hits) : ?>
 									<div class="control-group">
 										<div class="control-label">
-											<?php echo $this->form->getLabel('hits'); ?>
+											<?php echo $this->form->getLabel('created_by_alias'); ?>
 										</div>
 										<div class="controls">
-											<?php echo $this->form->getInput('hits'); ?>
+											<?php echo $this->form->getInput('created_by_alias'); ?>
 										</div>
 									</div>
-								<?php endif; ?>
-							</fieldset>
+									<div class="control-group">
+										<div class="control-label">
+											<?php echo $this->form->getLabel('created'); ?>
+										</div>
+										<div class="controls">
+											<?php echo $this->form->getInput('created'); ?>
+										</div>
+									</div>
+								</div>
+								<div class="span6">
+									<div class="control-group">
+										<div class="control-label">
+											<?php echo $this->form->getLabel('publish_up'); ?>
+										</div>
+										<div class="controls">
+											<?php echo $this->form->getInput('publish_up'); ?>
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="control-label">
+											<?php echo $this->form->getLabel('publish_down'); ?>
+										</div>
+										<div class="controls">
+											<?php echo $this->form->getInput('publish_down'); ?>
+										</div>
+									</div>
+									<?php if ($this->item->modified_by) : ?>
+										<div class="control-group">
+											<div class="control-label">
+												<?php echo $this->form->getLabel('modified_by'); ?>
+											</div>
+											<div class="controls">
+												<?php echo $this->form->getInput('modified_by'); ?>
+											</div>
+										</div>
+										<div class="control-group">
+											<div class="control-label">
+												<?php echo $this->form->getLabel('modified'); ?>
+											</div>
+											<div class="controls">
+												<?php echo $this->form->getInput('modified'); ?>
+											</div>
+										</div>
+									<?php endif; ?>
+					
+									<?php if ($this->item->version) : ?>
+										<div class="control-group">
+											<div class="control-label">
+												<?php echo $this->form->getLabel('version'); ?>
+											</div>
+											<div class="controls">
+												<?php echo $this->form->getInput('version'); ?>
+											</div>
+										</div>
+									<?php endif; ?>
+					
+									<?php if ($this->item->hits) : ?>
+										<div class="control-group">
+											<div class="control-label">
+												<?php echo $this->form->getLabel('hits'); ?>
+											</div>
+											<div class="controls">
+												<?php echo $this->form->getInput('hits'); ?>
+											</div>
+										</div>
+									<?php endif; ?>
+								</div>
+							</div>
 						</div>
 					<?php  endif; ?>
 					<?php  $fieldSets = $this->form->getFieldsets('attribs'); ?>
@@ -255,45 +292,6 @@ endif;
 							<?php endforeach; ?>
 						</div>
 					<?php endif ?>
-				
-					<?php // The url and images fields only show if the configuration is set to allow them.  ?>
-					<?php // This is for legacy reasons. ?>
-					<?php if ($params['show_urls_images_backend']): ?>
-						<div class="tab-pane" id="images">
-							<div class="control-group">
-								<div class="control-label">
-									<?php echo $this->form->getLabel('images'); ?>
-								</div>
-								<div class="controls">
-									<?php echo $this->form->getInput('images'); ?>
-								</div>
-							</div>
-							<?php foreach($this->form->getGroup('images') as $field): ?>
-								<div class="control-group">
-									<?php if (!$field->hidden): ?>
-										<div class="control-label">
-											<?php echo $field->label; ?>
-										</div>
-									<?php endif; ?>
-									<div class="controls">
-										<?php echo $field->input; ?>
-									</div>
-								</div>
-							<?php endforeach; ?>
-								<?php foreach($this->form->getGroup('urls') as $field): ?>
-								<div class="control-group">
-									<?php if (!$field->hidden): ?>
-										<div class="control-label">
-											<?php echo $field->label; ?>
-										</div>
-									<?php endif; ?>
-									<div class="controls">
-										<?php echo $field->input; ?>
-									</div>
-								</div>
-							<?php endforeach; ?>
-						</div>
-					<?php endif; ?>
 					
 					<div class="tab-pane" id="metadata">
 						<fieldset>
@@ -343,6 +341,14 @@ endif;
 					</div>
 					<div class="controls">
 						<?php echo $this->form->getInput('featured'); ?>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="control-label">
+						<?php echo $this->form->getLabel('language'); ?>
+					</div>
+					<div class="controls">
+						<?php echo $this->form->getInput('language'); ?>
 					</div>
 				</div>
 			</fieldset>

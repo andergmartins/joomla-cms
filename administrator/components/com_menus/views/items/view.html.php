@@ -173,11 +173,7 @@ class MenusViewItems extends JViewLegacy
 		JToolBarHelper::title(JText::_('COM_MENUS_VIEW_ITEMS_TITLE'), 'menumgr.png');
 		
 		if ($canDo->get('core.create')) {
-			$title = JText::_('JTOOLBAR_NEW');
-			$dhtml = "<button onClick=\"location.href='index.php?option=com_menus&view=menutypes&recordId=0'\" class=\"btn btn-primary\">
-						<i class=\"icon-plus icon-white\" title=\"$title\"></i> 
-						$title</button>";
-			$bar->appendButton('Custom', $dhtml, 'new');
+			JToolBarHelper::addNew('item.add');
 		}
 
 		if ($canDo->get('core.edit')) {

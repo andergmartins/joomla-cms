@@ -72,7 +72,7 @@ class plgButtonArticle extends JPlugin
 		$button->set('link', $link);
 		$button->set('text', JText::_('PLG_ARTICLE_BUTTON_ARTICLE'));
 		$button->set('name', 'file-add');
-		$button->set('options', "{handler: 'iframe', size: {x: 770, y: 400}}");
+		$button->set('options', "{handler: 'iframe', size: {x: 800, y: 500}}");
 
 		return $button;
 	}

@@ -779,7 +779,7 @@ class plgEditorTinymce extends JPlugin
 				 */
 				if ( $button->get('name') ) {
 					$modal		= ($button->get('modal')) ? ' class="modal-button btn"' : null;
-					$href		= ($button->get('link')) ? ' href="'.JURI::base().$button->get('link').'"' : null;
+					$href		= ($button->get('link')) ? ' class="btn" href="'.JURI::base().$button->get('link').'"' : null;
 					$onclick	= ($button->get('onclick')) ? ' onclick="'.$button->get('onclick').'"' : 'onclick="IeCursorFix(); return false;"';
 					$title      = ($button->get('title')) ? $button->get('title') : $button->get('text');
 					$return .= '<a' . $modal . ' title="' . $title . '"' . $href . $onclick . ' rel="' . $button->get('options')
@@ -802,7 +802,7 @@ class plgEditorTinymce extends JPlugin
 	{
 		$return  = '';
 		$return .= "\n<div class=\"toggle-editor btn-toolbar pull-right\">\n";
-		$return .= "<div class=\"btn-group\"><a class=\"btn\" href=\"#\" onclick=\"tinyMCE.execCommand('mceToggleEditor', false, '" . $name . "');return false;\" title=\"".JText::_('PLG_TINY_BUTTON_TOGGLE_EDITOR').'"><i class="icon-asterisk"></i> '.JText::_('PLG_TINY_BUTTON_TOGGLE_EDITOR')."</a></div>";
+		$return .= "<div class=\"btn-group\"><a class=\"btn\" href=\"#\" onclick=\"tinyMCE.execCommand('mceToggleEditor', false, '" . $name . "');return false;\" title=\"".JText::_('PLG_TINY_BUTTON_TOGGLE_EDITOR').'"><i class="icon-eye"></i> '.JText::_('PLG_TINY_BUTTON_TOGGLE_EDITOR')."</a></div>";
 		$return .= "</div>\n";
 
 		return $return;
