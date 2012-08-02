@@ -445,7 +445,7 @@ class JPagination extends JObject
 				'select.genericlist',
 				$limits,
 				$this->prefix . 'limit',
-				'class="inputbox" size="1" onchange="Joomla.submitform();"',
+				'class="inputbox input-mini" size="1" onchange="Joomla.submitform();"',
 				'value',
 				'text',
 				$selected
@@ -457,7 +457,7 @@ class JPagination extends JObject
 				'select.genericlist',
 				$limits,
 				$this->prefix . 'limit',
-				'class="inputbox" size="1" onchange="this.form.submit()"',
+				'class="inputbox input-mini" size="1" onchange="this.form.submit()"',
 				'value',
 				'text',
 				$selected
@@ -696,6 +696,11 @@ class JPagination extends JObject
 			{
 				$data->pages[$i]->base = $offset;
 				$data->pages[$i]->link = JRoute::_($params . '&' . $this->prefix . 'limitstart=' . $offset);
+				$data->pages[$i]->active = false;
+			}
+			elseif ($i = $this->get('pages.current'))
+			{
+				$data->pages[$i]->active = true;
 			}
 		}
 		return $data;

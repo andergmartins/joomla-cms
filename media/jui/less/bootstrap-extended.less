@@ -432,3 +432,28 @@ fieldset.radio.btn-group {
 .input-append > .add-on{
 	vertical-align: top;
 }
+
+/* Accessible Hidden Elements (good for hidden labels and such) */
+.element-invisible{
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+/* Form Vertical Overrides Form Horizontal */
+.form-vertical {
+	.control-label {
+		float: none;
+		width: auto;
+		padding-right: 0;
+		padding-top: 0;
+		text-align: left;
+	}
+	.controls{
+		margin-left: 0;
+	}
+}

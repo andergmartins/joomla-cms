@@ -38,6 +38,6 @@ foreach ($templates as $template)
 }
 
 echo JHtml::_(
-				'select.groupedlist', $templateGroups, 'jform[position]',
-				array('id' => 'jform_position', 'list.select' => $this->item->position)
-			);
+	'select.groupedlist', $templateGroups, 'jform[position]',
+	array('id' => 'jform_position', 'list.select' => $this->item->position)
+);

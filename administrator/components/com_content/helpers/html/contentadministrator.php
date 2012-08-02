@@ -29,7 +29,7 @@ abstract class JHtmlContentAdministrator
 		$state	= JArrayHelper::getValue($states, (int) $value, $states[1]);
 		$icon	= $state[0];
 		if ($canChange) {
-			$html	= '<a href="#" onclick="return listItemTask(\'cb'.$i.'\',\''.$state[1].'\')" class="tip" title="'.JText::_($state[3]).'"><i class="icon-'
+			$html	= '<a href="#" onclick="return listItemTask(\'cb'.$i.'\',\''.$state[1].'\')" class="btn btn-micro ' . ($value == 1 ? 'active' : '') . '" rel="tooltip" title="'.JText::_($state[3]).'"><i class="icon-'
 					. $icon.'"></i></a>';
 		}
 
