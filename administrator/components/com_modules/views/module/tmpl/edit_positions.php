@@ -9,9 +9,9 @@
 
 defined('_JEXEC') or die;
 
-require_once JPATH_ADMINISTRATOR.'/components/com_templates/helpers/templates.php';
+require_once JPATH_ADMINISTRATOR . '/components/com_templates/helpers/templates.php';
 
-JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 $clientId       = $this->state->get('filter.client_id');
 $state          = $this->state->get('filter.state');
 $templates      = array_keys(ModulesHelper::getTemplates($clientId, $state));
@@ -27,7 +27,7 @@ foreach ($templates as $template)
 	$positions = TemplatesHelper::getPositions($clientId, $template);
 	foreach ($positions as $position)
 	{
-		$option = new stdClass();
+		$option = new stdClass;
 		$option->value = $position;
 		$option->text = $position;
 
