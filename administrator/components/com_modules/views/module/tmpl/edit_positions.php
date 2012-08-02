@@ -17,11 +17,24 @@ $state          = $this->state->get('filter.state');
 $templates      = array_keys(ModulesHelper::getTemplates($clientId, $state));
 $templateGroups = array();
 
+// Add an empty value to be able to deselect a module position
+$option = new stdClass;
+$option->value = '';
+$option->text  = '';
+
+$group = array();
+$group['value'] = '';
+$group['text']  = '';
+$group['items'] = array($option);
+
+$templateGroups[''] = $group;
+
+// Add positions from templates
 foreach ($templates as $template)
 {
 	$group = array();
 	$group['value'] = $template;
-	$group['text'] = $template;
+	$group['text']  = $template;
 	$group['items'] = array();
 
 	$positions = TemplatesHelper::getPositions($clientId, $template);
@@ -29,7 +42,7 @@ foreach ($templates as $template)
 	{
 		$option = new stdClass;
 		$option->value = $position;
-		$option->text = $position;
+		$option->text  = $position;
 
 		$group['items'][] = $option;
 	}
