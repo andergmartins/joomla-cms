@@ -118,6 +118,7 @@ var Installation = new Class({
 		var req = new Request.HTML({
 			method: 'get',
 			url: url,
+			update: this.container,
 			onRequest: function() {
 				if (!fromSubmit) {
 					Joomla.removeMessages();
@@ -126,7 +127,6 @@ var Installation = new Class({
 			}.bind(this),
 			onSuccess: function (r) {
 				this.view = page;
-				document.id(this.container).empty().adopt(r);
 
 				// Attach JS behaviors to the newly loaded HTML
 				this.pageInit();
