@@ -43,7 +43,7 @@ class InstallationModelDatabase extends JModelLegacy
 	}
 
 	/**
-	 * @since	3.0
+	 * @since   3.0
 	 */
 	public static function resetRandUserId()
 	{
@@ -146,7 +146,7 @@ class InstallationModelDatabase extends JModelLegacy
 	}
 
 	/**
-	 * @since	3.0
+	 * @since   3.0
 	 */
 	public function createDatabase($options)
 	{
@@ -216,7 +216,7 @@ class InstallationModelDatabase extends JModelLegacy
 		catch (RuntimeException $e)
 		{
 			// If the database could not be selected, attempt to create it and then select it.
-			if ($this->createDB($db, $options->db_name))
+			if ($this->createDatabase($db, $options->db_name))
 			{
 				$db->select($options->db_name);
 			}
@@ -247,7 +247,7 @@ class InstallationModelDatabase extends JModelLegacy
 	}
 
 	/**
-	 * @since	3.0
+	 * @since   3.0
 	 */
 	public function handleOldDatabase($options)
 	{
@@ -290,7 +290,7 @@ class InstallationModelDatabase extends JModelLegacy
 	}
 
 	/**
-	 * @since	3.0
+	 * @since   3.0
 	 */
 	public function createTables($options)
 	{
@@ -562,7 +562,7 @@ class InstallationModelDatabase extends JModelLegacy
 	 * @param   string           $name    Name of the database to process.
 	 * @param   string           $prefix  Database table prefix.
 	 *
-	 * @return	boolean	True on success.
+	 * @return  boolean  True on success.
 	 *
 	 * @since	3.0
 	 */
@@ -618,11 +618,11 @@ class InstallationModelDatabase extends JModelLegacy
 	 * @param   JDatabaseDriver  $db    JDatabaseDriver object.
 	 * @param   string           $name  Name of the database to create.
 	 *
-	 * @return	boolean	True on success.
+	 * @return  boolean  True on success.
 	 *
 	 * @since   3.0
 	 */
-	public function createDB($db, $name)
+	public function createDatabase($db, $name)
 	{
 		// Build the create database query.
 		$query = 'CREATE DATABASE ' . $db->quoteName($name) . ' CHARACTER SET `utf8`';
@@ -650,9 +650,9 @@ class InstallationModelDatabase extends JModelLegacy
 	 * @param   string           $name    Name of the database to process.
 	 * @param   string           $prefix  Database table prefix.
 	 *
-	 * @return	boolean	True on success.
+	 * @return  boolean  True on success.
 	 *
-	 * @since	3.0
+	 * @since   3.0
 	 */
 	public function deleteDatabase($db, $name, $prefix)
 	{
@@ -691,9 +691,9 @@ class InstallationModelDatabase extends JModelLegacy
 	 * @param   JDatabaseDriver  $db      JDatabase object.
 	 * @param   string           $schema  Path to the schema file.
 	 *
-	 * @return	boolean	True on success.
+	 * @return  boolean  True on success.
 	 *
-	 * @since	3.0
+	 * @since   3.0
 	 */
 	public function populateDatabase($db, $schema)
 	{
@@ -741,7 +741,7 @@ class InstallationModelDatabase extends JModelLegacy
 	 * @param   JDatabaseDriver  $db    JDatabaseDriver object.
 	 * @param   string           $name  Name of the database to process.
 	 *
-	 * @return	boolean	True on success.
+	 * @return  boolean  True on success.
 	 *
 	 * @since   3.0
 	 */
@@ -770,7 +770,7 @@ class InstallationModelDatabase extends JModelLegacy
 	 *
 	 * @param   string  $sql  SQL schema.
 	 *
-	 * @return  array   Queries to perform.
+	 * @return  array  Queries to perform.
 	 *
 	 * @since   3.0
 	 */

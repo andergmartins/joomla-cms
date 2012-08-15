@@ -26,13 +26,13 @@
 .defaultSkin table.mceLayout tr.mceFirst td {}
 .defaultSkin table.mceLayout tr.mceLast td {}
 .defaultSkin table.mceToolbar, .defaultSkin tr.mceFirst .mceToolbar tr td, .defaultSkin tr.mceLast .mceToolbar tr td { margin:0; padding:0;}
-.defaultSkin td.mceToolbar { 
+.defaultSkin td.mceToolbar {
 	background-color: #f7f7f9;
 	border-bottom: 1px solid #cccccc;
 	vertical-align:top;
 }
 .defaultSkin .mceIframeContainer { }
-.defaultSkin .mceStatusbar { 
+.defaultSkin .mceStatusbar {
 	background-color: #f7f7f9;
 	border-top: 1px solid #cccccc;
 	font-family:'MS Sans Serif',sans-serif,Verdana,Arial;

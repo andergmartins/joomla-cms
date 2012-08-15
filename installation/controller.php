@@ -43,7 +43,7 @@ class InstallationController extends JControllerLegacy
 		}
 		else
 		{
-			$default_view	= 'site';
+			$default_view = 'site';
 		}
 
 		$vName   = $this->input->getWord('view', $default_view);

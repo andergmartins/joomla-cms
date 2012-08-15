@@ -40,7 +40,7 @@ class JHtmlInstallation
 
 		$html = array();
 		$html[] = '<ul class="nav nav-tabs">';
-		foreach($tabs as $tab)
+		foreach ($tabs as $tab)
 		{
 			$html[] = self::getTab($tab, $tabs);
 		}
@@ -48,11 +48,21 @@ class JHtmlInstallation
 		return implode('', $html);
 	}
 
-	public static function getTab($id, &$tabs)
+	/**
+	 * @param   string  $id
+	 * @param   array   $tabs
+	 *
+	 * @return  string  Markup for the tab
+	 *
+	 * @since   3.0
+	 */
+	private static function getTab($id, $tabs)
 	{
-		$num = self::getNumber($id, $tabs);
-		$view = self::getNumber(JRequest::getWord('view'), $tabs);
-		$tab = '<span class="badge">' . $num . '</span> ' . JText::_('INSTL_STEP_' . strtoupper($id) . '_LABEL');
+		$input = JFactory::getApplication()->input;
+		$num   = self::getTabNumber($id, $tabs);
+		$view  = self::getTabNumber($input->getWord('view'), $tabs);
+		$tab   = '<span class="badge">' . $num . '</span> ' . JText::_('INSTL_STEP_' . strtoupper($id) . '_LABEL');
+
 		if ($view + 1 == $num)
 		{
 			$tab = '<a href="#" onclick="Install.submitform();">' . $tab . '</a>';
@@ -65,10 +75,19 @@ class JHtmlInstallation
 		{
 			$tab = '<a href="#" onclick="return Install.goToPage(\'' . $id . '\')">' . $tab . '</a>';
 		}
+
 		return '<li class="step' . ($num == $view ? ' active' : '') . '" id="' . $id . '">' . $tab . '</li>';
 	}
 
-	public static function getNumber($id, &$tabs)
+	/**
+	 * @param   string  $id
+	 * @param   array   $tabs
+	 *
+	 * @return  int
+	 *
+	 * @since   3.0
+	 */
+	private static function getTabNumber($id, $tabs)
 	{
 		$num = (int) array_search($id, $tabs);
 		$num++;

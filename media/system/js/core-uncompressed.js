@@ -126,7 +126,7 @@ Joomla.checkAll = function(checkbox, stub) {
 Joomla.renderMessages = function(messages) {
 	Joomla.removeMessages();
 	var container = document.id('system-message-container');
-	
+
 	Object.each(messages, function (item, type) {
 		var div = new Element('div', {
 			id: 'system-message',
@@ -135,7 +135,7 @@ Joomla.renderMessages = function(messages) {
 		div.inject(container);
 		var h4 = new Element('h4', {
 			'class' : 'alert-heading',
-			html: Joomla.JText._(type)		
+			html: Joomla.JText._(type)
 		});
 		h4.inject(div);
 		var divList = new Element('div');
