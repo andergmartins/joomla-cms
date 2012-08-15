@@ -14,7 +14,7 @@ JHtml::_('behavior.keepalive');
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-vertical">
 <?php if ($params->get('greeting')) : ?>
 	<div class="login-greeting">
-	<?php if($params->get('name') == 0) : {
+	<?php if ($params->get('name') == 0) : {
 		echo JText::sprintf('MOD_LOGIN_HINAME', htmlspecialchars($user->get('name')));
 	} else : {
 		echo JText::sprintf('MOD_LOGIN_HINAME', htmlspecialchars($user->get('username')));

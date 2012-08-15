@@ -148,10 +148,10 @@ $sortFields = $this->getSortFields();
 			</tfoot>
 			<tbody>
 			<?php foreach ($this->items as $i => $item) :
-				$ordering	= ($listOrder == 'ordering');
-				$canEdit	= $user->authorise('core.edit',			'com_plugins');
-				$canCheckin	= $user->authorise('core.manage',		'com_checkin') || $item->checked_out==$user->get('id') || $item->checked_out==0;
-				$canChange	= $user->authorise('core.edit.state',	'com_plugins') && $canCheckin;
+				$ordering   = ($listOrder == 'ordering');
+				$canEdit    = $user->authorise('core.edit',       'com_plugins');
+				$canCheckin = $user->authorise('core.manage',     'com_checkin') || $item->checked_out == $user->get('id') || $item->checked_out == 0;
+				$canChange  = $user->authorise('core.edit.state', 'com_plugins') && $canCheckin;
 				?>
 				<tr class="row<?php echo $i % 2; ?>" sortable-group-id="<?php echo $item->folder?>">
 					<td class="order nowrap center hidden-phone">

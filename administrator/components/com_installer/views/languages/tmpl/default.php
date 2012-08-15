@@ -74,7 +74,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					<tbody>
 						<?php foreach ($this->items as $i => $language) :
 						?>
-						<tr class="row<?php echo $i%2; ?>">
+						<tr class="row<?php echo $i % 2; ?>">
 							<td class="hidden-phone">
 								<?php echo JHtml::_('grid.id', $i, $language->update_id, false, 'cid'); ?>
 							</td>
