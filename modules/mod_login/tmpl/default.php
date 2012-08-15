@@ -50,7 +50,7 @@ JHtml::_('behavior.keepalive');
 					<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
 					<?php echo JText::_('MOD_LOGIN_REGISTER'); ?> <i class="icon-arrow-right"></i></a>
 				</li>
-				
+
 			</ul>
 		<?php endif; ?>
 		<input type="hidden" name="option" value="com_users" />
