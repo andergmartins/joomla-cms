@@ -22,7 +22,7 @@ JHtml::_('behavior.caption');
 </div>
 <?php endif; ?>
 <form id="adminForm" action="<?php echo JRoute::_('index.php')?>" method="post" class="form-inline">
-	<fieldset class="filters">	
+	<fieldset class="filters">
 	<div class="filter-search alert alert-info">
 		<?php if ($this->params->get('filter_field') != 'hide') : ?>
 		<label class="filter-search-lbl" for="filter-search"><?php echo JText::_('COM_CONTENT_'.$this->params->get('filter_field').'_FILTER_LABEL').'&#160;'; ?></label>
@@ -32,7 +32,7 @@ JHtml::_('behavior.caption');
 		<?php echo $this->form->monthField; ?>
 		<?php echo $this->form->yearField; ?>
 		<?php echo $this->form->limitField; ?>
-		
+
 	</div>
 	<button type="submit" class="btn btn-primary"><?php echo JText::_('JGLOBAL_FILTER_BUTTON'); ?></button>
 	<input type="hidden" name="view" value="archive" />

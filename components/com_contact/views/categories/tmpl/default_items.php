@@ -33,7 +33,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 					</small>
 				<?php endif; ?>
 	        <?php endif; ?>
-		
+
 			<?php if ($this->params->get('show_cat_items_cat') == 1) :?>
 					<span class="badge badge-info pull-right" title="<?php echo JText::_('COM_CONTACT_COUNT'); ?>"><?php echo $item->numitems; ?></span>
 			<?php endif; ?>

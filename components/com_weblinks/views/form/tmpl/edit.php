@@ -47,7 +47,7 @@ $params = $this->state->get('params');
 				</button>
 			</div>
 		</div>
-			
+
 		<hr class="hr-condensed" />
 		<div class="control-group">
 			<div class="control-label">

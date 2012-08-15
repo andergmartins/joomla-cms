@@ -42,8 +42,8 @@ class InstallationViewSummary extends JViewLegacy
 			return false;
 		}
 
-		$this->phpsettings		= $this->get('PhpSettings');
-		$this->phpoptions		= $this->get('PhpOptions');
+		$this->phpsettings = $this->get('PhpSettings');
+		$this->phpoptions  = $this->get('PhpOptions');
 
 		parent::display($tpl);
 	}

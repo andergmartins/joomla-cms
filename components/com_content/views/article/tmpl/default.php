@@ -21,7 +21,6 @@ $user    = JFactory::getUser();
 JHtml::_('behavior.caption');
 
 ?>
-
 <div class="item-page<?php echo $this->pageclass_sfx?>">
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
 	<div class="page-header">

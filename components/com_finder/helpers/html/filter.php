@@ -364,7 +364,7 @@ abstract class JHtmlFilter
 
 				// Translate branch nodes if possible.
 				$language = JFactory::getLanguage();
-				foreach($branches[$bk]->nodes as $node_id => $node)
+				foreach ($branches[$bk]->nodes as $node_id => $node)
 				{
 					$key = FinderHelperLanguage::branchPlural($node->title);
 					if ($language->hasKey($key))

@@ -12,7 +12,6 @@ $class = ' class="first"';
 ?>
 
 <?php if (count($this->children[$this->category->id]) > 0) : ?>
-
 	<?php foreach($this->children[$this->category->id] as $id => $child) : ?>
 		<?php
 		if ($this->params->get('show_empty_categories') || $child->getNumItems(true) || count($child->getChildren())) :
@@ -62,5 +61,4 @@ $class = ' class="first"';
 			</div>
 		<?php endif; ?>
 	<?php endforeach; ?>
-
 <?php endif; ?>

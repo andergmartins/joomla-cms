@@ -19,7 +19,6 @@ JHtml::_('behavior.framework');
 
 ?>
 <?php if ($this->item->state == 0) : ?>
-
 <div class="system-unpublished">
 	<?php endif; ?>
 	<?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>

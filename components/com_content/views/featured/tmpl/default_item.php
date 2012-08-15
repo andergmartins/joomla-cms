@@ -15,7 +15,6 @@ $images = json_decode($this->item->images);
 $canEdit	= $this->item->params->get('access-edit');
 ?>
 <?php if ($this->item->state == 0) : ?>
-
 <div class="system-unpublished">
 	<?php endif; ?>
 	<?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
