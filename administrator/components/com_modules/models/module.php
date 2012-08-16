@@ -984,8 +984,8 @@ class ModulesModelModule extends JModelAdmin
 			{
 				// Assign new module to `all` menu item associations.
 				// $this->_db->setQuery(
-				// 	'INSERT INTO #__modules_menu'.
-				// 	' SET moduleid = ' . (int) $table->id . ', menuid = 0'
+				//  'INSERT INTO #__modules_menu'.
+				//  ' SET moduleid = ' . (int) $table->id . ', menuid = 0'
 				// );
 
 				$query->clear();

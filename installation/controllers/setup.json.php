@@ -78,7 +78,7 @@ class InstallationControllerSetup extends JControllerLegacy
 			}
 
 			// Redirect to the page.
-			$r->view = JRequest::getWord('view', 'site');
+			$r->view = $this->input->getWord('view', 'site');
 			$this->sendResponse($r);
 			return false;
 		}
@@ -87,7 +87,7 @@ class InstallationControllerSetup extends JControllerLegacy
 		$vars = $model->storeOptions($return);
 
 		// Redirect to the page.
-		$r->view = JRequest::getWord('view', 'site');
+		$r->view = $this->input->getWord('view', 'site');
 		$this->sendResponse($r);
 	}
 

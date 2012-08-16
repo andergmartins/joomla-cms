@@ -17,7 +17,7 @@ jimport('joomla.filesystem.path');
  * @package  Joomla.Installation
  * @since    3.0
  */
-class InstallationModelFTP extends JModelLegacy
+class InstallationModelFtp extends JModelLegacy
 {
 	/**
 	 * Find the ftp filesystem root for a given user/pass pair.
