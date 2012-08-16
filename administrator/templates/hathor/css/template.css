@@ -1,15 +1,3 @@
-@charset "UTF-8";
-
-/**
- * @package     Joomla.Administrator
- * @subpackage  templates.hathor
- * @copyright   Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- * @since       1.6
- *
- * Main CSS file for the template
- */
-
 @font-face {
 	font-family: 'IcoMoon';
 	src: url('../../../../media/jui/fonts/IcoMoon.eot');
@@ -18,14 +6,12 @@
 	font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
 	font-family: 'IcoMoon';
 	content: attr(data-icon);
 	speak: none;
 }
 
-/* From Bootstrap */
 [class^="icon-"],
 [class*=" icon-"] {
 	display: inline-block;
@@ -35,7 +21,6 @@
 	line-height: 14px;
 }
 
-/* Use the following CSS code if you want to have a class per icon */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
 	font-family: 'IcoMoon';
@@ -603,9 +588,6 @@
 	content: "\e024";
 }
 
-/**
- * CSS Reset
- */
 html,
 body,
 div,
@@ -692,9 +674,6 @@ del {
 	text-decoration: line-through;
 }
 
-/**
- * General styles
- */
 html {
 	overflow-y: scroll;
 	height: 100%;
@@ -780,7 +759,6 @@ iframe {
 	border: 0;
 }
 
-/* new styles */
 .enabled {
 	color: #005800;
 	font-weight: bold;
@@ -844,10 +822,6 @@ p.warning {
 	margin: 10px;
 }
 
-/* end new styles */
-/**
- * Overall Styles
- */
 #minwidth,
 #minwidth-body {
 	min-width: 980px;
@@ -894,9 +868,6 @@ p.warning {
 	padding: 15px;
 }
 
-/**
- * Status layout
- */
 #module-status {
 	float: right;
 	position: relative;
@@ -923,9 +894,6 @@ p.warning {
 	width: 60%;
 }
 
-/**
- * Various Styles
- */
 .enabled,
 .disabled,
 p.error,
@@ -952,9 +920,6 @@ div.checkin-tick {
 	text-indent: -9999px;
 }
 
-/**
- * Overlib
- */
 .ol-textfont {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.2em;
@@ -970,9 +935,6 @@ div.checkin-tick {
 	text-decoration: none;
 }
 
-/**
- * Subheader, toolbar, page title
- */
 div.subheader .padding {
 	padding: 0;
 }
@@ -1000,7 +962,6 @@ tabs-below > .nav-tabs,
 	border-bottom: 0;
 }
 
-/* Tabbed Content */
 .tab-content {
 	overflow: visible;
 }
@@ -1009,7 +970,6 @@ tabs-below > .nav-tabs,
 	overflow: auto;
 }
 
-/* Non-linkable nav-tabs */
 .nav-tabs > li > span {
 	display: block;
 	margin-right: 2px;
@@ -1024,14 +984,12 @@ tabs-below > .nav-tabs,
 	border-radius: 4px 4px 0 0;
 }
 
-/* Extended Joomla Button Classes */
 .btn-micro {
 	padding: 1px 4px;
 	font-size: 10px;
 	line-height: 8px;
 }
 
-/* Joomla => Bootstrap Tooltip */
 .tip-wrap {
 	max-width: 200px;
 	padding: 3px 8px;
@@ -1107,9 +1065,6 @@ div.btn-toolbar button:focus {
 	text-decoration: none;
 }
 
-/**
- * Massmail component
- */
 td#mm_pane {
 	width: 90%;
 }
@@ -1122,9 +1077,6 @@ textarea#mm_message {
 	width: 100%;
 }
 
-/**
- * Pane Slider pane Toggler styles
- */
 .pane-sliders {
 	margin: 0;
 	position: relative;
@@ -1149,7 +1101,7 @@ h3.pane-toggler a:focus {
 	outline: none;
 }
 
-.pane-toggler span {
+.pane-toggler  span {
 	padding-left: 20px;
 }
 
@@ -1157,9 +1109,6 @@ h3.pane-toggler a:focus {
 	padding-left: 20px;
 }
 
-/* The following line hides the unseen panel (prevents the mouse from activating in IE, so overridden in the ie css files) */
-/*.pane-toggler + div.pane-slider {display: none;}
-*/
 .pane-slider.pane-hide {
 	display: none;
 }
@@ -1173,9 +1122,6 @@ div#position-icon.pane-sliders div.pane-down .icon-wrapper .icon {
 	margin: 0;
 }
 
-/**
- * Tabs
- */
 dl.tabs {
 	float: left;
 	margin: 10px 0 -1px 0;
@@ -1202,7 +1148,6 @@ div.current dd {
 	margin: 0;
 }
 
-/* New parameter styles	*/
 dl#content-pane.tabs {
 	margin: 1px 0 0 0;
 }
@@ -1277,7 +1222,6 @@ div.current table#filter-config select {
 	margin-bottom: 0;
 }
 
-/* -------- Menu Assigments ---------- */
 div#menu-assignment {
 	clear: left;
 }
@@ -1309,10 +1253,6 @@ p.tab-description {
 	margin-top: 5px;
 }
 
-/* end new parameter styles */
-/**
- * Login Settings
- */
 #login-page form .inputbox {
 	width: 120px;
 	margin-left: 5px;
@@ -1426,9 +1366,6 @@ p.tab-description {
 	height: 0;
 }
 
-/**
- * Cpanel Settings
- */
 #cpanel div.icon,
 .cpanel div.icon {
 	text-align: center;
@@ -1470,9 +1407,6 @@ div.cpanel-component {
 	float: right;
 }
 
-/**
- * Standard Layout Styles
- */
 div.col {
 	float: left;
 }
@@ -1491,8 +1425,6 @@ div.col2 {
 	width: 45%;
 }
 
-/* Avoid using the width divs. They are here for 3PD Extensions if needed
-	 * Use the specific layout divs listed after. See also the th.width entries */
 div.width-1 {
 	width: 1%;
 }
@@ -1577,7 +1509,6 @@ div.width-100 {
 	float: none;
 }
 
-/* Layout Divs */
 div.main-section {
 	width: 60%;
 }
@@ -1587,7 +1518,6 @@ div.options-section {
 	margin: 10px 10px 10px 0;
 }
 
-/* for bluestork style html */
 div.width-40.fltrt {
 	width: 38%;
 	margin: 10px 10px 10px 0;
@@ -1598,9 +1528,6 @@ div.rules-section {
 	margin: 10px;
 }
 
-/**
- * Form Styles
- */
 fieldset {
 	margin: 2px 10px 2px 10px;
 	padding: 5px;
@@ -1653,7 +1580,6 @@ fieldset.panelform fieldset.radio span.faux-label {
 	clear: none;
 }
 
-/* checkboxes */
 fieldset.adminform fieldset.checkboxes,
 fieldset.panelform fieldset.checkboxes,
 fieldset.adminform-legacy fieldset.checkboxes {
@@ -1677,8 +1603,6 @@ fieldset.panelform fieldset.checkboxes span.faux-label {
 	clear: right;
 }
 
-/* end checkboxes */
-/* spacer */
 div.current span.spacer > span.before,
 fieldset.adminform span.spacer > span.before,
 fieldset.panelform span.spacer > span.before {
@@ -1688,7 +1612,6 @@ fieldset.panelform span.spacer > span.before {
 	display: block;
 }
 
-/* end spacer */
 fieldset.panelform-legacy label,
 fieldset.adminform-legacy label,
 fieldset.panelform-legacy span.faux-label,
@@ -1697,7 +1620,6 @@ fieldset.adminform-legacy span.faux-label {
 	float: left;
 }
 
-/* JParameter classes on radio button labels	*/
 fieldset.panelform-legacy label.radiobtn-jno,
 fieldset.panelform-legacy label.radiobtn-jyes,
 fieldset.panelform-legacy label.radiobtn-show,
@@ -1774,12 +1696,10 @@ fieldset#filter-bar input#search {
 	width: 10em;
 }
 
-/* Note: these visual cues should be augmented by aria */
 .invalid {
 	font-weight: bold;
 }
 
-/* augmented by aria in template javascript */
 input.readonly,
 span.faux-input {
 	border: 0;
@@ -1849,9 +1769,6 @@ label.selectlabel {
 	left: -1000em;
 }
 
-/**
- * Option or Parameter styles
- */
 .paramrules {
 	padding: 10px;
 }
@@ -1866,9 +1783,6 @@ span.gtr {
 	margin-right: 5px;
 }
 
-/**
- * Admintable Styles
- */
 table.admintable td {
 	padding: 3px;
 	font-size: 1em;
@@ -1907,9 +1821,6 @@ table.admintable td.key.vtop {
 	vertical-align: top;
 }
 
-/**
- * Admin Form Styles
- */
 fieldset.adminform {
 	margin: 0 10px 10px 10px;
 	overflow: hidden;
@@ -1933,7 +1844,6 @@ ul.adminformlist .button2-left {
 	margin-top: 5px;
 }
 
-/* Table styles are for use with tabular data */
 table.adminform {
 	width: 100%;
 	border-collapse: collapse;
@@ -1970,16 +1880,11 @@ table.adminform tr {
 	padding-right: 10px;
 }
 
-/**
- * Table formating styles
- */
 td.center,
 th.center {
 	text-align: center;
 }
 
-/* Avoid using the width classes. They are here for 3PD Extensions if needed
-	 * Use the specific layout table headers listed after. See also the div.width entries */
 th.width-1 {
 	width: 1%;
 }
@@ -2020,7 +1925,6 @@ th.width-40 {
 	width: 40%;
 }
 
-/* Table header layout classes */
 th.row-number-col {
 	width: 3%;
 }
@@ -2093,9 +1997,6 @@ th.home-col {
 	width: 5%;
 }
 
-/**
- * Adminlist Table layout
- */
 table.adminlist {
 	width: 100%;
 }
@@ -2122,7 +2023,6 @@ table.adminlist tbody th {
 	font-weight: bold;
 }
 
-/* Table row styles */
 table.adminlist tr {
 	padding-left: 30px;
 	padding-right: 30px;
@@ -2141,7 +2041,6 @@ table.adminlist tfoot tr {
 	text-align: center;
 }
 
-/* Table td/th styles */
 table.adminlist tfoot td,
 table.adminlist tfoot th {
 	text-align: center;
@@ -2164,9 +2063,6 @@ table.adminlist td.order input {
 	font-size: 100%;
 }
 
-/**
- * Tree indentation & nesting - Up to 10 levels deep so don't go crazy :
- */
 table.adminlist td.indent-4 {
 	padding-left: 4px;
 }
@@ -2207,9 +2103,6 @@ table.adminlist td.indent-139 {
 	padding-left: 139px;
 }
 
-/**
- * Adminlist buttons
- */
 table.adminlist tr td.btns a {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -2223,26 +2116,16 @@ table.adminlist tr td.btns a:focus {
 	text-decoration: none;
 }
 
-/**
- * Adminlist lists
- */
 table.adminlist td li {
 	list-style: inside;
 }
 
-/**
- * Modal Modules styles
- */
 ul#new-modules-list {
 	margin-left: 50px;
 	font-size: 1.4em;
 	line-height: 1.5em;
 }
 
-/**
- * Utility styles
- */
-/* General Clearing Class */
 .clr {
 	clear: both;
 	overflow: hidden;
@@ -2263,7 +2146,6 @@ ul#new-modules-list {
 	margin-left: 5px;
 }
 
-/* stu nicholls solution for centering divs */
 .container {
 	clear: both;
 	text-decoration: none;
@@ -2273,7 +2155,6 @@ ul#new-modules-list {
 	display: inline-block;
 }
 
-/* table solution for global config */
 table.noshow {
 	width: 100%;
 	border-collapse: collapse;
@@ -2289,9 +2170,6 @@ table.noshow fieldset {
 	margin: 15px 7px 7px 7px;
 }
 
-/**
- * Saving order icon styling in admin tables
- */
 a.saveorder {
 	width: 16px;
 	height: 16px;
@@ -2301,9 +2179,6 @@ a.saveorder {
 	margin-right: 8px;
 }
 
-/**
- * Button styling
- */
 #editor-xtd-buttons {
 	padding: 5px;
 }
@@ -2322,7 +2197,6 @@ button {
 	font-weight: bold;
 }
 
-/* Button 1 Type */
 .button1,
 .button1 div {
 	height: 1%;
@@ -2345,10 +2219,6 @@ button {
 	font-weight: bold;
 	cursor: default;
 	padding: 0 6px 0 6px;
-	/* add padding if you are using the directional images */
-
-	/* padding: 0 30px 0 6px; */
-
 }
 
 .button1 a:hover,
@@ -2356,7 +2226,6 @@ button {
 	text-decoration: none;
 }
 
-/* Button 2 Type */
 .button2-left,
 .button2-right {
 	float: left;
@@ -2382,7 +2251,6 @@ button {
 	cursor: default;
 }
 
-/* these are inactive buttons */
 .button2-left span,
 .button2-right span {
 	cursor: default;
@@ -2431,10 +2299,6 @@ button {
 	margin-left: 5px;
 }
 
-/**
- * Pagination styles
- */
-/* Normal pagination styles */
 div.containerpg {
 	position: relative;
 	left: 50%;
@@ -2467,7 +2331,6 @@ div.pagination {
 	font-size: 100%;
 }
 
-/* The Go submittal button */
 .pagination button {
 	font-size: 100%;
 	height: 1.8em;
@@ -2482,7 +2345,6 @@ div.pagination .button2-left {
 	line-height: 1.6em;
 }
 
-/* Style if pagination is part of the table (old style) */
 table.adminlist .pagination {
 	display: table;
 	padding: 0;
@@ -2497,16 +2359,10 @@ table.adminlist .pagination button {
 	margin-right: 20px;
 }
 
-/**
- * MCE Editor
- */
 div.toggle-editor {
 	margin: -15px;
 }
 
-/**
- * Tooltips
- */
 .tip {
 	float: left;
 	padding: 5px;
@@ -2529,9 +2385,6 @@ div.toggle-editor {
 	margin: 0;
 }
 
-/**
- * Calendar
- */
 a img.calendar {
 	width: 16px;
 	height: 16px;
@@ -2540,9 +2393,6 @@ a img.calendar {
 	vertical-align: middle;
 }
 
-/**
- * JGrid styles
- */
 a.jgrid:hover {
 	text-decoration: none;
 }
@@ -2557,14 +2407,6 @@ a.jgrid:hover {
 	display: none;
 }
 
-/**
- * Icons
- * The Background Icons for Menus, Toolbars, Quick Icons
- * are now in the color css files
- */
-/**
- * General styles
- */
 div.message {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
@@ -2610,9 +2452,6 @@ div.message {
 	padding: 2px;
 }
 
-/**
- * Modal Styles
- */
 h2.modal-title {
 	margin-left: 15px;
 	margin-bottom: 0;
@@ -2702,10 +2541,6 @@ body.contentpane select {
 	font-size: 110%;
 }
 
-/**
- * User Accessibility
- */
-/* Skip to Content Structural Styling */
 #skiplinkholder a,
 #skiplinkholder a:link,
 #skiplinkholder a:visited {
@@ -2733,7 +2568,6 @@ body.contentpane select {
 	left: -200%;
 }
 
-/* Skip to Content Visual Styling */
 #skiplinkholder a,
 #skiplinkholder a:link,
 #skiplinkholder a:visited {
@@ -2745,7 +2579,6 @@ body.contentpane select {
 	padding-right: 20px;
 }
 
-/* Hide overlayed controls so that keyboarders can get to the modal */
 .body-overlayed a,
 .body-overlayed input,
 .body-overlayed button {
@@ -2758,11 +2591,6 @@ body.contentpane select {
 	visibility: visible;
 }
 
-/**
- * Admin Form Styles
- */
-/* For elements that aren't to be seen by users unless the user does something
-	 * like clicking on a header to see the collapsed section. */
 .element-hidden,
 .hide {
 	display: none;
@@ -2776,8 +2604,6 @@ body.contentpane select {
 	height: 0;
 }
 
-/* For elements that aren't to be seen by visual users but do need to be read by screenreaders.
-	 * Cannot be used for elements that can get focus such as links and form elements */
 .element-invisible,
 .hidelabeltxt {
 	height: 0;
@@ -2787,8 +2613,6 @@ body.contentpane select {
 	margin: 0;
 }
 
-/* Firefox has issues styling legend so this is a universal fix
-	for making the legend invisible (i.e. visually it's not there, but screen readers see it */
 legend.element-invisible {
 	position: absolute !important;
 	margin: 0;
@@ -2847,7 +2671,6 @@ fieldset.panelform button {
 	width: auto;
 }
 
-/* -------- Batch Section ---------- */
 fieldset.batch {
 	margin: 20px 10px 10px 10px;
 	padding: 10px;
@@ -2912,7 +2735,6 @@ div#jform_ordering {
 	margin-top: 3px;
 }
 
-/* Banner edit */
 #jform_impmade,
 #jform_clicks {
 	width: 30px;
@@ -2927,9 +2749,6 @@ fieldset.adminform input#jform_clickurl {
 	width: 20em;
 }
 
-/**
- * ACL STYLES relocated from com_users/media/grid.css
- */
 a.move_up {
 	display: inline-block;
 	height: 16px;
@@ -2977,14 +2796,10 @@ a.grid_trash {
 	width: 16px;
 }
 
-/**
- * ACL PANEL STYLES
- */
 div.acl-options {
 	width: 100%;
 }
 
-/* All Tabs */
 table.aclsummary-table,
 table.aclmodify-table {
 	border-collapse: collapse;
@@ -3003,7 +2818,6 @@ table.aclmodify-table caption {
 	display: none;
 }
 
-/* Summary Tab */
 table.aclsummary-table th.col1 {
 	width: 25%;
 }
@@ -3018,7 +2832,6 @@ table.aclsummary-table th.col6 {
 	text-align: center;
 }
 
-/* Icons (background images moved to color css files */
 span.icon-16-unset,
 span.icon-16-allowed,
 span.icon-16-denied,
@@ -3050,7 +2863,6 @@ label.icon-16-deny {
 	left: 40%;
 }
 
-/* Create, Edit, Edit State & Delete Tabs */
 table.aclmodify-table th.col2,
 table.aclmodify-table th.col3,
 table.aclmodify-table th.col4 {
@@ -3068,7 +2880,6 @@ table.aclmodify-table td label {
 	min-width: 20px;
 }
 
-/* ACL footer/legend */
 ul.acllegend {
 	list-style: none;
 	font-size: 1.091em;
@@ -3186,9 +2997,6 @@ label#jform_filters-lbl {
 	visibility: hidden;
 }
 
-/**
-* Options modal- config
-*/
 ul.config-option-list,
 ul.config-option-list li {
 	margin: 0;
@@ -3202,9 +3010,6 @@ ul.config-option-list fieldset {
 	padding-right: 0;
 }
 
-/* *
-* Permission Rules
-*/
 #permissions-sliders ul#rules,
 #permissions-sliders ul#rules ul {
 	margin: 0 !important;
@@ -3281,7 +3086,7 @@ table.group-rules td select {
 	padding: 5px;
 }
 
-#permissions-sliders ul#rules table.group-rules th {
+#permissions-sliders  ul#rules  table.group-rules th {
 	text-align: left;
 	padding: 4px;
 }
@@ -3303,23 +3108,16 @@ table.group-rules td select {
 	padding: 0;
 }
 
-/*
- * Debug styles
- */
 .swatch {
 	text-align: center;
 	padding: 0 15px 0 15px;
 }
 
-/* Tab changes for accessibility */
 dl.tabs dt h3 {
 	padding: 0;
 	font-size: 100%;
 }
 
-/**
- * Helpmenus
- */
 ul.helpmenu li {
 	float: right;
 	margin: 10px;
@@ -3328,19 +3126,7 @@ ul.helpmenu li {
 	font-weight: bold;
 }
 
-/* CSS file for Accessible Admin Menu
- * based on Matt Carrolls' son of suckerfish
- * with javascript by Bill Tomczak
- */
-/* Note: set up the font-size on the id and used 100% on the elements.
-	If ul/li/a are different ems, then the shifting back via non-js keyboard
-	doesn't work properly */
-/**
- * Menu Styling
- */
 #menu {
-	/* this is on the main ul */
-
 	position: relative;
 	z-index: 100;
 	padding: 0;
@@ -3352,8 +3138,6 @@ ul.helpmenu li {
 }
 
 #menu ul {
-	/* all lists */
-
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -3368,18 +3152,12 @@ ul.helpmenu li {
 	padding: 0.35em 2.5em 0.35em 2em;
 	vertical-align: middle;
 	display: block;
-	/* width: 10em; */
-
 	text-decoration: none;
 	font-size: 100%;
 }
 
 #menu li {
-	/* all list items */
-
 	float: left;
-	/* width: 12em;	width needed or else Opera goes nuts */
-
 	font-size: 100%;
 }
 
@@ -3400,28 +3178,18 @@ ul.helpmenu li {
 }
 
 #menu li ul {
-	/* second-level lists */
-
 	position: absolute;
 	width: 16em;
 	margin-left: -1000em;
-	/* using left instead of display to hide menus because display: none isn't read by screen readers */
-
 }
 
 #menu li li {
-	/* second-level row */
-
 	border: none;
 	width: 16em;
 }
 
 #menu li ul ul {
-	/* third-and-above-level lists */
-
 	margin: -2.3em 0 0 -1000em;
-	/* top margin is equal to parent line height+bottom padding */
-
 }
 
 #menu li:hover ul ul,
@@ -3431,8 +3199,6 @@ ul.helpmenu li {
 
 #menu li:hover ul,
 #menu li.sfhover ul {
-	/* lists nested under hovered list items */
-
 	margin-left: 0;
 }
 
@@ -3441,22 +3207,14 @@ ul.helpmenu li {
 	margin-left: 16em;
 }
 
-/**
- * Extra positioning rules for limited noscript keyboard accessibility
- * need the backgrounds here to keep the background as the nav background
- * since it is overlaying other content.
- * Using margin-left instead of left so that can move back without javascript
- * display downlevel ul
- */
-#menu li a:focus + ul {
+#menu li a:focus+ul {
 	margin-left: 0;
 }
 
-#menu li li a:focus + ul {
+#menu li li a:focus+ul {
 	margin-left: 1016em;
 }
 
-/* bring back the focus elements into view */
 #menu li li a:focus {
 	margin-left: 1000em;
 	width: 10em;
@@ -3472,20 +3230,15 @@ ul.helpmenu li {
 	margin-left: 0;
 }
 
-#menu li li:hover a:focus + ul,
-#menu li li.sfhover a.sffocus + ul {
+#menu li li:hover a:focus+ul,
+#menu li li.sfhover a.sffocus+ul {
 	margin-left: 16em;
 }
 
-/**
- * Submenu styling
- */
 #submenu {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	/* border-bottom plus padding-bottom is the technique */
-
 	padding-bottom: 2.5em;
 	line-height: 2em;
 }
@@ -3530,21 +3283,18 @@ ul.helpmenu li {
 	text-decoration: none;
 }
 
-/* -- CUSTOM LANG STRINGS STYLES	----------- */
 .red {
 	font-weight: bold;
 	color: #c00;
 }
 
-/* -- OTHER STYLES	----------- */
 .pre_message {
 	font-size: 1.3em;
 }
 
-/* -- Update check badges -- */
 span.update-badge {
-	background-image: -moz-linear-gradient(center bottom, #ff0000 41%, #fc7e7e 79%);
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.41, #ff0000), color-stop(0.79, #fc7e7e));
+	background-image: -moz-linear-gradient(center bottom,#FF0000 41%,#FC7E7E 79%);
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.41,#ff0000),color-stop(0.79,#fc7e7e));
 	border: 2px solid white;
 	border-radius: 1.5em 1.5em 1.5em 1.5em;
 	color: white;
@@ -3560,7 +3310,6 @@ span.update-badge {
 	top: -88px;
 }
 
-/* User Notes */
 .unotes ul,
 .unotes ol {
 	list-style: none;
@@ -3593,7 +3342,6 @@ span.update-badge {
 	padding-bottom: 10px;
 }
 
-/* com-install styling */
 div#database-sliders {
 	margin: 10px;
 }
@@ -3603,7 +3351,6 @@ fieldset.uploadform {
 	margin-bottom: 10px;
 }
 
-/* Installer Database */
 #installer-database,
 #installer-discover,
 #installer-update,
@@ -3619,7 +3366,6 @@ fieldset.uploadform {
 	padding-left: 20px;
 }
 
-/* Spinner */
 .joomlaupdate_spinner {
 	float: left;
 	margin-right: 15px;
@@ -3651,18 +3397,18 @@ fieldset.uploadform {
 	margin-bottom: 20px;
 	background-color: #f5f5f5;
 	border: 1px solid #eee;
-	border: 1px solid rgba(0, 0, 0, 0.05);
+	border: 1px solid rgba(0,0,0,0.05);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 }
 
 .well blockquote {
 	border-color: #ddd;
-	border-color: rgba(0, 0, 0, 0.15);
+	border-color: rgba(0,0,0,0.15);
 }
 
 .well-large {
@@ -3679,7 +3425,6 @@ fieldset.uploadform {
 	border-radius: 3px;
 }
 
-/* Striped */
 .list-striped,
 .row-striped {
 	list-style: none;
@@ -3723,7 +3468,7 @@ fieldset.uploadform {
 .alert {
 	padding: 8px 35px 8px 14px;
 	margin-bottom: 18px;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 	background-color: #fcf8e3;
 	border: 1px solid #fbeed5;
 	-webkit-border-radius: 4px;
@@ -3836,9 +3581,6 @@ table {
 	padding: 5px 5px 6px;
 }
 
-/*
- * Bootstrap Labels & Badges
- */
 .label,
 .badge {
 	font-size: 10.998px;
@@ -3847,7 +3589,7 @@ table {
 	color: #ffffff;
 	vertical-align: baseline;
 	white-space: nowrap;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
 	background-color: #999999;
 }
 

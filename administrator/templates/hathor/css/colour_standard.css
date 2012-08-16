@@ -1,40 +1,3 @@
-@charset "UTF-8";
-
-/**
- * @package     Joomla.Administrator
- * @subpackage  templates.hathor
- * @copyright   Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- * @since       1.6
- *
- * Color CSS file for the template - standard
- */
-
-/**
- * Main colors:
- * #2c2c2c	Text
- * #054993	Links
- * #ffffff	Background, border, text
- * #f9fade	Background alternate, button/icon/menu background
- * #e5f0fa	Background (input required)
- * #e3e4ca	Background Hover, Right/Bottom icon borders
- * #c7c8b2	Main borders
- * #868778	Top/Left icon hover borders
- * #f6f7db	Right/Bottom icon hover borders
- *
- * Special Use Colors:
- * #a20000	Text Error, border invalid
- * #cccccc	Text (faded)
- * #005800	Text (success)
- * #eeeeee	Background (input disabled)
- * #ffffcf	Background‚ permissions debug
- * #cfffda	Background‚ permissions debug
- * #ffcfcf	Background‚ permissions debug
- */
-
-/**
- * General styles
- */
 body {
 	background-color: #ffffff;
 	color: #2c2c2c;
@@ -52,9 +15,6 @@ a:visited {
 	color: #054993;
 }
 
-/**
- * Overall Styles
- */
 #header {
 	background: #ffffff url(../images/j_logo.png) no-repeat;
 }
@@ -66,12 +26,12 @@ a:visited {
 #nav {
 	border: 1px solid #c7c8b2;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 }
 
 #content {
@@ -93,12 +53,6 @@ a:visited {
 	border-top: 1px solid #c7c8b2;
 }
 
-/**
- * Status layout
- */
-/**
- * Various Styles
- */
 .enabled,
 .success,
 .allow,
@@ -132,9 +86,6 @@ div.checkin-tick {
 	background: url(../images/admin/tick.png) 20px 50% no-repeat;
 }
 
-/**
- * Overlib
- */
 .ol-foreground {
 	background-color: #f9fade;
 }
@@ -155,9 +106,6 @@ div.checkin-tick {
 	color: #054993;
 }
 
-/**
- * Subheader, toolbar, page title
- */
 div.subheader .padding {
 	background: #ffffff;
 }
@@ -194,12 +142,12 @@ div.btn-toolbar div.btn-group button {
 	border-right: 1px solid #c7c8b2;
 	border-bottom: 1px solid #c7c8b2;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 	padding: 5px 4px 5px 4px;
 }
 
@@ -217,9 +165,6 @@ div.btn-toolbar div.btn-group button.inactive {
 	background: #f9fade;
 }
 
-/**
- * Pane Slider pane Toggler styles
- */
 .pane-sliders .title {
 	color: #2c2c2c;
 }
@@ -230,12 +175,12 @@ div.btn-toolbar div.btn-group button.inactive {
 
 .pane-sliders .panel h3 {
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 	color: #054993;
 }
 
@@ -267,18 +212,15 @@ div.btn-toolbar div.btn-group button.inactive {
 	border-bottom: 1px solid #c7c8b2;
 }
 
-/**
- * Tabs
- */
 dl.tabs dt {
 	border: 1px solid #c7c8b2;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 	color: #054993;
 }
 
@@ -309,9 +251,6 @@ div.current {
 	background: #ffffff;
 }
 
-/**
- * New parameter styles
- */
 div.current fieldset {
 	border: none 0;
 }
@@ -320,9 +259,6 @@ div.current fieldset.adminform {
 	border: 1px solid #c7c8b2;
 }
 
-/**
- * Login Settings
- */
 #login-page .pagetitle h2 {
 	background: transparent;
 }
@@ -337,12 +273,12 @@ div.current fieldset.adminform {
 
 #login-page #element-box.login {
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 }
 
 #form-login {
@@ -358,9 +294,6 @@ div.current fieldset.adminform {
 	color: #054993;
 }
 
-/**
- * Cpanel Settings
- */
 #cpanel div.icon a,
 .cpanel div.icon a {
 	color: #054993;
@@ -369,12 +302,12 @@ div.current fieldset.adminform {
 	border-right: 1px solid #c7c8b2;
 	border-bottom: 1px solid #c7c8b2;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 }
 
 #cpanel div.icon a:hover,
@@ -389,9 +322,6 @@ div.current fieldset.adminform {
 	background: #e5d9c3;
 }
 
-/**
- * Form Styles
- */
 fieldset {
 	border: 1px #c7c8b2 solid;
 }
@@ -421,18 +351,14 @@ fieldset#filter-bar ul li fieldset {
 	border: 0;
 }
 
-/* Note: these visual cues should be augmented by aria */
 .invalid {
 	color: #a20000;
 }
 
-/* must be augmented by aria at the same time if changed dynamically by js
-aria-invalid=true or aria-invalid=false */
 input.invalid {
 	border: 1px solid #a20000;
 }
 
-/* augmented by aria in template javascript */
 input.readonly,
 span.faux-input {
 	border: 0;
@@ -453,18 +379,17 @@ span.faux-input {
 	border: 1px solid #c7c8b2;
 }
 
-/* Inputs used as buttons */
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
 	color: #054993;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 }
 
 input[type="button"]:hover,
@@ -493,9 +418,6 @@ option:hover {
 	color: #054993;
 }
 
-/**
- * Option or Parameter styles
- */
 .paramrules {
 	background: #f9fade;
 }
@@ -504,9 +426,6 @@ span.gi {
 	color: #c7c8b2;
 }
 
-/**
- * Admintable Styles
- */
 table.admintable td.key,
 table.admintable td.paramlist_key {
 	background-color: #f9fade;
@@ -522,16 +441,10 @@ table.paramlist td.paramlist_description {
 	border-right: 1px solid #c7c8b2;
 }
 
-/**
- * Admin Form Styles
- */
 fieldset.adminform {
 	border: 1px solid #c7c8b2;
 }
 
-/**
- * Table styles are for use with tabular data
- */
 table.adminform {
 	background-color: #ffffff;
 }
@@ -554,9 +467,6 @@ table.adminform tr {
 	border-right: 1px solid #c7c8b2;
 }
 
-/**
- * Adminlist Table layout
- */
 table.adminlist {
 	border-spacing: 1px;
 	background-color: #ffffff;
@@ -578,9 +488,6 @@ table.adminlist thead th {
 	border-bottom: 1px solid #c7c8b2;
 }
 
-/**
- * Table row styles
- */
 table.adminlist tbody tr {
 	background: #ffffff;
 }
@@ -622,12 +529,12 @@ table.adminlist tbody tr.row0:last-child th {
 table.adminlist tbody tr.row0 td,
 table.adminlist tbody tr.row0 th {
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 }
 
 table.adminlist {
@@ -638,27 +545,21 @@ table.adminlist tfoot tr {
 	color: #2c2c2c;
 }
 
-/**
- * Table td/th styles
- */
 table.adminlist tfoot td,
 table.adminlist tfoot th {
 	background-color: #ffffff;
 	border-top: 1px solid #c7c8b2;
 }
 
-/**
- * Adminlist buttons
- */
 table.adminlist tr td.btns a {
 	border: 1px solid #c7c8b2;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 	color: #054993;
 }
 
@@ -668,9 +569,6 @@ table.adminlist tr td.btns a:focus {
 	background-color: #ffffff;
 }
 
-/**
- * Saving order icon styling in admin tables
- */
 a.saveorder {
 	background: url(../images/admin/filesave.png) no-repeat;
 }
@@ -679,26 +577,20 @@ a.saveorder.inactive {
 	background-position: 0 -16px;
 }
 
-/**
- * Saving order icon styling in admin tables
- */
 fieldset.batch {
 	background: #ffffff;
 }
 
-/**
- * Button styling
- */
 button {
 	color: #054993;
 	border: 1px solid #c7c8b2;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 }
 
 button:hover,
@@ -710,24 +602,20 @@ button:focus {
 	color: #ff0000;
 }
 
-/* Button 1 Type */
 .button1 {
 	border: 1px solid #c7c8b2;
 	color: #054993;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 }
 
-/* Use this if you add images to the buttons such as directional arrows */
 .button1 a {
 	color: #054993;
-	/* add padding if you are using the directional images */
-	/* padding: 0 30px 0 6px; */
 }
 
 .button1 a:hover,
@@ -735,17 +623,16 @@ button:focus {
 	background: #e5d9c3;
 }
 
-/* Button 2 Type */
 .button2-left,
 .button2-right {
 	border: 1px solid #c7c8b2;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 }
 
 .button2-left a,
@@ -755,7 +642,6 @@ button:focus {
 	color: #054993;
 }
 
-/* these are inactive buttons */
 .button2-left span,
 .button2-right span {
 	color: #999999;
@@ -773,17 +659,10 @@ button:focus {
 	background: #e5d9c3;
 }
 
-/**
- * Pagination styles
- */
-/* Grey out the current page number */
 .pagination .page span {
 	color: #999999;
 }
 
-/**
- * Tooltips
- */
 .tip {
 	background: #ffffff;
 	border: 1px solid #c7c8b2;
@@ -793,16 +672,10 @@ button:focus {
 	background: url(../images/selector-arrow-std.png) no-repeat;
 }
 
-/**
- * Calendar
- */
 a img.calendar {
 	background: url(../images/calendar.png) no-repeat;
 }
 
-/**
- * JGrid styles
- */
 .jgrid span.publish {
 	background-image: url(../images/admin/tick.png);
 }
@@ -863,11 +736,6 @@ a img.calendar {
 	background-image: url(../images/admin/publish_y.png);
 }
 
-/**
- * Menu Icons
- * These icons are used on the Administrator menu
- * The classes are constructed dynamically when the menu is generated
- */
 .icon-16-archive {
 	background-image: url(../images/menu/icon-16-archive.png);
 }
@@ -1040,8 +908,6 @@ a img.calendar {
 	background-image: url(../images/menu/icon-16-module.png);
 }
 
-/* .icon-16-new 		{ background-image: url(../images/menu/icon-16-new.png); }
- */
 .icon-16-newarticle {
 	background-image: url(../images/menu/icon-16-newarticle.png);
 }
@@ -1142,11 +1008,6 @@ a img.calendar {
 	background-image: url(../images/menu/icon-16-links-cat.png);
 }
 
-/**
- * Toolbar icons
- * These icons are used for the toolbar buttons
- * The classes are constructed dynamically when the toolbar is created
- */
 .icon-32-send {
 	background-image: url(../images/toolbar/icon-32-send.png);
 }
@@ -1307,12 +1168,6 @@ a img.calendar {
 	background-image: url(../images/toolbar/icon-32-print.png);
 }
 
-/**
- * Quick Icons
- * Also knows as Header Icons
- * These are used for the Quick Icons on the Control Panel
- * The same classes are also assigned the Component Title
- */
 .icon-48-categories {
 	background-image: url(../images/header/icon-48-category.png);
 }
@@ -1589,9 +1444,6 @@ a img.calendar {
 	background-image: url(../images/header/icon-48-category-add.png);
 }
 
-/**
- * General styles
- */
 div.message {
 	border: 1px solid #c7c8b2;
 	color: #2c2c2c;
@@ -1609,9 +1461,6 @@ div.message {
 	background: #ffffff;
 }
 
-/**
- * Modal Styles
- */
 dl.menu_type dt {
 	border-bottom: 1px solid #c7c8b2;
 }
@@ -1620,10 +1469,6 @@ ul#new-modules-list {
 	border-top: 1px solid #c7c8b2;
 }
 
-/**
- * User Accessibility
- */
-/* Skip to Content Visual Styling */
 #skiplinkholder a,
 #skiplinkholder a:link,
 #skiplinkholder a:visited {
@@ -1632,16 +1477,10 @@ ul#new-modules-list {
 	border-bottom: solid #336 2px;
 }
 
-/**
- * Admin Form Styles
- */
 fieldset.panelform {
 	border: none 0;
 }
 
-/**
- * ACL STYLES relocated from com_users/media/grid.css
- */
 a.move_up {
 	background-image: url('../images/admin/uparrow.png');
 }
@@ -1670,15 +1509,10 @@ a.grid_trash {
 	background-image: url('../images/admin/icon-16-trash.png');
 }
 
-/**
- * ACL PANEL STYLES
- */
-/* All Tabs */
 tr.row1 {
 	background-color: #f9fade;
 }
 
-/* Summary Tab */
 table.aclsummary-table td.col2,
 table.aclsummary-table th.col2,
 table.aclsummary-table td.col3,
@@ -1694,7 +1528,6 @@ table.aclmodify-table th.col2 {
 	border-left: 1px solid #c7c8b2;
 }
 
-/* Icons */
 span.icon-16-unset {
 	background: url(../images/admin/icon-16-denyinactive.png) no-repeat;
 }
@@ -1735,7 +1568,6 @@ a.icon-16-denyinactive {
 	background: url(../images/admin/icon-16-denyinactive.png) no-repeat;
 }
 
-/* ACL footer/legend */
 ul.acllegend li.acl-allowed {
 	background: url(../images/admin/icon-16-allow.png) no-repeat left;
 }
@@ -1762,7 +1594,6 @@ li.acl-resetbtn:focus {
 	background-color: #e5d9c3;
 }
 
-/* ACL Config --------- */
 table#acl-config {
 	border: 1px solid #c7c8b2;
 }
@@ -1777,16 +1608,10 @@ table#acl-config th.acl-groups {
 	border-right: 1px solid #c7c8b2;
 }
 
-/**
-* Mod_rewrite Warning
-*/
 #jform_sef_rewrite-lbl {
 	background: url(../images/admin/icon-16-notice-note.png) right top no-repeat;
 }
 
-/**
-* Permission Rules
-*/
 #permissions-sliders ul#rules,
 #permissions-sliders ul#rules ul {
 	border: solid 0 #c7c8b2;
@@ -1841,7 +1666,7 @@ ul#rules table.group-rules td label {
 	border: solid 0 #c7c8b2;
 }
 
-#permissions-sliders ul#rules table.group-rules td {
+#permissions-sliders  ul#rules  table.group-rules td {
 	background: #ffffff;
 }
 
@@ -1850,9 +1675,6 @@ ul#rules table.group-rules td label {
 	background-image: none;
 }
 
-/*
- * Debug styles
- */
 .check-0,
 table.adminlist tbody td.check-0 {
 	background-color: #ffffcf;
@@ -1868,9 +1690,6 @@ table.adminlist tbody td.check-d {
 	background-color: #ffcfcf;
 }
 
-/**
- * System Messages
- */
 #system-message dd ul {
 	color: #2c2c2c;
 }
@@ -1887,32 +1706,18 @@ table.adminlist tbody td.check-d {
 	color: #2c2c2c;
 }
 
-/** CSS file for Accessible Admin Menu
- * based on Matt Carrolls' son of suckerfish
- * with javascript by Bill Tomczak
- */
-/* Note: set up the font-size on the id and used 100% on the elements.
-	If ul/li/a are different ems, then the shifting back via non-js keyboard
-	doesn't work properly */
-/**
- * Menu Styling
- */
 #menu {
-	/* this is on the main ul */
-
 	color: #2c2c2c;
 }
 
 #menu ul.dropdown-menu {
-	/* all lists */
-
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 	color: #2c2c2c;
 }
 
@@ -1932,8 +1737,6 @@ table.adminlist tbody td.check-d {
 }
 
 #menu li {
-	/* all list items */
-
 	border-right: 1px solid #c7c8b2;
 	background-color: transparent;
 }
@@ -1948,57 +1751,44 @@ table.adminlist tbody td.check-d {
 #menu li.disabled a {
 	color: #c7c8b2;
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 }
 
 #menu li ul {
-	/* second-level lists */
-
 	border: 1px solid #c7c8b2;
 }
 
 #menu li li {
-	/* second-level row */
-
 	background-color: transparent;
 }
 
-/**
- * Styling parents
- */
-/* 1 level - sfhover */
 #menu li.sfhover a {
 	background-color: #e5d9c3;
 }
 
-/* 2 level - normal */
 #menu li.sfhover li a {
 	background-color: transparent;
 }
 
-/* 2 level - hover */
 #menu li.sfhover li.sfhover a,
 #menu li li a:focus {
 	background-color: #e5d9c3;
 }
 
-/* 3 level - normal */
 #menu li.sfhover li.sfhover li a {
 	background-color: transparent;
 }
 
-/* 3 level - hover */
 #menu li.sfhover li.sfhover li.sfhover a,
 #menu li li li a:focus {
 	background-color: #e5d9c3;
 }
 
-/* bring back the focus elements into view */
 #menu li li a:focus,
 #menu li li li a:focus {
 	background-color: #e5d9c3;
@@ -2008,28 +1798,19 @@ table.adminlist tbody td.check-d {
 	background-color: #e5d9c3;
 }
 
-/**
- * Submenu styling
- */
 #submenu {
 	border-bottom: 1px solid #c7c8b2;
-	/* border-bottom plus padding-bottom is the technique */
-
-	/* This is the background befind the tabs */
-
-	/*background: @background;*/
-
 }
 
 #submenu li,
 #submenu span.nolink {
 	background: #f9fade;
-	background-image: -moz-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -ms-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fade), to(#f9fade));
-	background-image: -webkit-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: -o-linear-gradient(center top, #f9fade, #f9fade 70%);
-	background-image: linear-gradient(center top, #f9fade, #f9fade 70%);
+	background-image: -moz-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -ms-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fade),to(#f9fade));
+	background-image: -webkit-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: -o-linear-gradient(center top,#f9fade,#f9fade 70%);
+	background-image: linear-gradient(center top,#f9fade,#f9fade 70%);
 	border: 1px solid #c7c8b2;
 	color: #054993;
 }
@@ -2055,12 +1836,10 @@ table.adminlist tbody td.check-d {
 	padding: 0;
 }
 
-/* -- Codemirror Editor	----------- */
 div.CodeMirror-wrapping {
 	border: 1px solid #c7c8b2;
 }
 
-/* User Notes */
 table.adminform tr.row0 {
 	background-color: #ffffff;
 }
@@ -2081,7 +1860,6 @@ ol.alternating > li:nth-child(even) {
 	background-color: #f9fade;
 }
 
-/* Installer Database */
 #installer-database,
 #installer-discover,
 #installer-update,
