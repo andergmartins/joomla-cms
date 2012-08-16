@@ -34,7 +34,7 @@ class JFormFieldChromeStyle extends JFormFieldGroupedList
 	 *
 	 * @return  array  The field option objects as a nested array in groups.
 	 *
-	 * @since   1.6
+	 * @since   3.0
 	 */
 	protected function getGroups()
 	{

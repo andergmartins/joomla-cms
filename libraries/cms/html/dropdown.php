@@ -88,10 +88,10 @@ abstract class JHtmlDropdown
 		}
 
 		$dropDownList = '<div class="btn-group" style="margin-left:6px;display:none">
-		 						<a href="#" data-toggle="dropdown" class="dropdown-toggle btn btn-mini">
-		 							<span class="caret"></span>
-		 						</a>
-		 					<ul class="dropdown-menu">';
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle btn btn-mini">
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">';
 		self::$dropDownList = $dropDownList;
 		self::$loaded[__METHOD__] = true;
 		return;
