@@ -91,7 +91,7 @@ abstract class ModulesHelper
 
 		$query->select('DISTINCT(position)');
 		$query->from('#__modules');
-		$query->where($db->quoteName('client_id') . '  = ' . (int) $clientId);
+		$query->where($db->quoteName('client_id') . ' = ' . (int) $clientId);
 		$query->order('position');
 
 		$db->setQuery($query);
@@ -145,7 +145,6 @@ abstract class ModulesHelper
 		$query->from('#__extensions');
 		$query->where('client_id = ' . (int) $clientId);
 		$query->where('type = ' . $db->quote('template'));
-
 		if ($state != '')
 		{
 			$query->where('enabled = ' . $db->quote($state));
@@ -165,7 +164,7 @@ abstract class ModulesHelper
 	/**
 	 * Get a list of the unique modules installed in the client application.
 	 *
-	 * @param   integer  $clientId  The client id.
+	 * @param   int  $clientId  The client id.
 	 *
 	 * @return  array  Array of unique modules
 	 */
@@ -204,7 +203,7 @@ abstract class ModulesHelper
 	/**
 	 * Get a list of the assignment options for modules to menus.
 	 *
-	 * @param   integer  $clientId  The client id.
+	 * @param   int  $clientId  The client id.
 	 *
 	 * @return  array
 	 */

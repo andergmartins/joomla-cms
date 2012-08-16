@@ -477,9 +477,9 @@ class ModulesModelModule extends JModelAdmin
 	 * @param   string   $title        The title.
 	 * @param   string   $position     The position.
 	 *
-	 * @return	array  Contains the modified title.
+	 * @return  array  Contains the modified title.
 	 *
-	 * @since	2.5
+	 * @since   2.5
 	 */
 	protected function generateNewTitle($category_id, $title, $position)
 	{

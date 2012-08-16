@@ -455,7 +455,6 @@
 
 		<field name="show_category_title"
 			type="radio"
-			class="btn-group"
 			label="JGLOBAL_SHOW_CATEGORY_TITLE"
 			description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
 			default="1"
