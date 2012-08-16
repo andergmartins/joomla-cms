@@ -18,12 +18,13 @@ JHtml::_('behavior.formvalidation');
 JHtml::_('behavior.keepalive');
 
 // Create shortcut to parameters.
-	$params = $this->state->get('params');
-
-	$params = $params->toArray();
+$params = $this->state->get('params');
+$params = $params->toArray();
 
 // This checks if the config options have ever been saved. If they haven't they will fall back to the original settings.
 $editoroptions = isset($params['show_publishing_options']);
+
+$input = JFactory::getApplication()->input;
 
 if (!$editoroptions):
 	$params['show_publishing_options'] = '1';

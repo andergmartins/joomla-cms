@@ -9,7 +9,8 @@
 
 defined('_JEXEC') or die;
 
-$template = JFactory::getApplication()->getTemplate();
+$app      = JFactory::getApplication();
+$template = $app->getTemplate();
 
 // Load the tooltip behavior.
 JHtml::_('behavior.tooltip');

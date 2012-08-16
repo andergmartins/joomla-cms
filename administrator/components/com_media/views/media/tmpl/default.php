@@ -9,7 +9,8 @@
 
 defined('_JEXEC') or die;
 
-$user = JFactory::getUser();
+$user  = JFactory::getUser();
+$input = JFactory::getApplication()->input;
 ?>
 <div class="row-fluid">
 	<!-- Begin Sidebar -->

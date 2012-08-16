@@ -13,7 +13,8 @@ defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.modal');
-$canDo	= TemplatesHelper::getActions();
+$canDo = TemplatesHelper::getActions();
+$input = JFactory::getApplication()->input;
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_templates&view=template'); ?>" method="post" name="adminForm" id="adminForm" class="form-horizontal">
 		<fieldset id="template-manager">
@@ -116,7 +117,7 @@ $canDo	= TemplatesHelper::getActions();
 
 		<input type="hidden" name="task" value="" />
 </form>
-<form action="<?php echo JRoute::_('index.php?option=com_templates&task=template.copy&id=' . JRequest::getInt('id')); ?>"
+<form action="<?php echo JRoute::_('index.php?option=com_templates&task=template.copy&id=' . $input->getInt('id')); ?>"
 		method="post" name="adminForm" id="adminForm">
 	<fieldset class="adminform" id="template-manager-css">
 		<legend><?php echo JText::_('COM_TEMPLATES_TEMPLATE_COPY');?></legend>
