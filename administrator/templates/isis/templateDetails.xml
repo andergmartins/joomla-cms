@@ -9,11 +9,10 @@
   <copyright>Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.</copyright>
   <description>TPL_ISIS_XML_DESCRIPTION</description>
   <files>
-  	<filename>component.php</filename>
-  	<filename>cpanel.php</filename>
+    <filename>component.php</filename>
+    <filename>cpanel.php</filename>
     <filename>favicon.ico</filename>
     <filename>index.php</filename>
-    <filename>LICENSE.txt</filename>
     <filename>login.php</filename>
     <filename>templateDetails.xml</filename>
     <filename>template_preview.png</filename>
@@ -45,13 +44,13 @@
   </languages>
   <config>
 	  <fields name="params">
-	  	<fieldset name="layout" label="Layout">
-  			<field name="templateColor" class="" type="color" default=""
-  				label="TPL_ISIS_COLOR_LABEL"
-  				description="TPL_ISIS_COLOR_DESC" />
-  			<field name="logoFile" class="" type="media" default=""
-  				label="TPL_ISIS_LOGO_LABEL"
-  				description="TPL_ISIS_LOGO_DESC" />
+         <fieldset name="layout" label="Layout">
+            <field name="templateColor" class="" type="color" default=""
+                label="TPL_ISIS_COLOR_LABEL"
+                description="TPL_ISIS_COLOR_DESC" />
+            <field name="logoFile" class="" type="media" default=""
+                label="TPL_ISIS_LOGO_LABEL"
+                description="TPL_ISIS_LOGO_DESC" />
 		</fieldset>
 	  </fields>
   </config>
