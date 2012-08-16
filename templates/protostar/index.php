@@ -13,11 +13,11 @@ $app = JFactory::getApplication();
 $doc = JFactory::getDocument();
 
 // Detecting Active Variables
-$option = JRequest::getCmd('option', '');
-$view = JRequest::getCmd('view', '');
-$layout = JRequest::getCmd('layout', '');
-$task = JRequest::getCmd('task', '');
-$itemid = JRequest::getCmd('Itemid', '');
+$option   = $app->input->getCmd('option', '');
+$view     = $app->input->getCmd('view', '');
+$layout   = $app->input->getCmd('layout', '');
+$task     = $app->input->getCmd('task', '');
+$itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->getCfg('sitename');
 
 if($task == "edit" || $layout == "form" )

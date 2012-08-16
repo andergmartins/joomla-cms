@@ -9,8 +9,9 @@
 
 defined('_JEXEC') or die;
 
+$input = JFactoy::getApplication()->input;
 // Checking if loaded via index.php or component.php
-$tmpl = JRequest::getCmd('tmpl', '');
+$tmpl = $input->getCmd('tmpl', '');
 ?>
 
 <script type="text/javascript">

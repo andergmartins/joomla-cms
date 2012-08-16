@@ -9,9 +9,9 @@
 
 defined('_JEXEC') or die;
 
-$hideLinks	= JRequest::getBool('hidemainmenu');
-$task = JRequest::getCmd('task');
-$output = array();
+$hideLinks = $input->getBool('hidemainmenu');
+$task      = $input->getCmd('task');
+$output    = array();
 
 // Print the Preview link to Main site.
 if ($params->get('show_viewsite', 1)) :
@@ -44,7 +44,7 @@ endif;
 
 
 // Print the logout link.
-if ($task == 'edit' || $task == 'editA' || JRequest::getInt('hidemainmenu')) {
+if ($task == 'edit' || $task == 'editA' || $input->getInt('hidemainmenu')) {
 	$logoutLink = '';
 } else {
 	$logoutLink = JRoute::_('index.php?option=com_login&task=logout&'. JSession::getFormToken() .'=1');

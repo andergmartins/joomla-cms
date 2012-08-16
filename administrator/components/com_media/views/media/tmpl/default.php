@@ -78,7 +78,7 @@ $input = JFactory::getApplication()->input;
 			</form>
 		</div>
 		<div id="collapseFolder" class="collapse">
-			<form action="index.php?option=com_media&amp;task=folder.create&amp;tmpl=<?php echo JRequest::getCmd('tmpl', 'index');?>" name="folderForm" id="folderForm" class="form-inline" method="post">
+			<form action="index.php?option=com_media&amp;task=folder.create&amp;tmpl=<?php echo $input->getCmd('tmpl', 'index');?>" name="folderForm" id="folderForm" class="form-inline" method="post">
 					<div class="path">
 						<input class="inputbox" type="text" id="folderpath" readonly="readonly" />
 						<input class="inputbox" type="text" id="foldername" name="foldername"  />
@@ -90,7 +90,7 @@ $input = JFactory::getApplication()->input;
 		</div>
 		<?php endif;?>
 
-		<form action="index.php?option=com_media&amp;task=folder.create&amp;tmpl=<?php echo JRequest::getCmd('tmpl', 'index');?>" name="folderForm" id="folderForm" method="post">
+		<form action="index.php?option=com_media&amp;task=folder.create&amp;tmpl=<?php echo $input->getCmd('tmpl', 'index');?>" name="folderForm" id="folderForm" method="post">
 			<div id="folderview">
 				<div class="view">
 					<iframe class="thumbnail" src="index.php?option=com_media&amp;view=mediaList&amp;tmpl=component&amp;folder=<?php echo $this->state->folder;?>" id="folderframe" name="folderframe" width="100%" height="500px" marginwidth="0" marginheight="0" scrolling="auto"></iframe>
