@@ -216,7 +216,7 @@ class InstallationModelDatabase extends JModelLegacy
 		catch (RuntimeException $e)
 		{
 			// If the database could not be selected, attempt to create it and then select it.
-			if ($this->createDatabase($db, $options->db_name))
+			if ($this->createDB($db, $options->db_name))
 			{
 				$db->select($options->db_name);
 			}
@@ -622,7 +622,7 @@ class InstallationModelDatabase extends JModelLegacy
 	 *
 	 * @since   3.0
 	 */
-	public function createDatabase($db, $name)
+	public function createDB($db, $name)
 	{
 		// Build the create database query.
 		$query = 'CREATE DATABASE ' . $db->quoteName($name) . ' CHARACTER SET `utf8`';
