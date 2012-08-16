@@ -1906,7 +1906,7 @@ table.adminlist tbody td.check-d {
 	color: #2c2c2c;
 }
 
-#menu ul {
+#menu ul.dropdown-menu {
 	/* all lists */
 	background: #c3d2e5;
 	background-image: -moz-linear-gradient(center top, #a5bbd4, #c3d2e5 70%);
@@ -1918,11 +1918,11 @@ table.adminlist tbody td.check-d {
 	color: #2c2c2c;
 }
 
-#menu ul li.node {
+#menu ul.dropdown-menu li.dropdown {
 	background: url(../images/j_arrow.png) no-repeat right 50%;
 }
 
-#menu ul li.separator {
+#menu ul.dropdown-menu li.divider {
 	margin-bottom: 0;
 	border-bottom: 1px dotted #738498;
 }
