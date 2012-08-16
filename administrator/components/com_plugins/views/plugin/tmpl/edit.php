@@ -28,7 +28,7 @@ JHtml::_('behavior.formvalidation');
 		  <li class="active"><a href="#details" data-toggle="tab"><?php echo JText::_('JDETAILS');?></a></li>
 		  <li><a href="#options" data-toggle="tab"><?php echo JText::_('COM_PLUGINS_BASIC_FIELDSET_LABEL');?></a></li>
 		</ul>
-		
+
 		<div class="tab-content">
 			<div class="tab-pane active" id="details">
 				<div class="control-group">
@@ -93,7 +93,7 @@ JHtml::_('behavior.formvalidation');
 				<!-- Plugin metadata -->
 				<?php if ($this->item->xml) : ?>
 					<?php if ($text = trim($this->item->xml->description)) : ?>
-						<div class="control-group">									
+						<div class="control-group">
 							<label id="jform_extdescription-lbl" class="control-label">
 								<?php echo JText::_('JGLOBAL_DESCRIPTION'); ?>
 							</label>

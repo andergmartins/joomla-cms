@@ -158,8 +158,8 @@ $sortFields = $this->getSortFields();
 						<th width="15%" class="left hidden-phone">
 							<?php echo JText::_('COM_MODULES_HEADING_POSITION'); ?>
 						</th>
-		                <th width="10%" class="left hidden-phone" >
-		                	<?php echo JText::_('COM_MODULES_HEADING_MODULE'); ?>
+						<th width="10%" class="left hidden-phone" >
+							<?php echo JText::_('COM_MODULES_HEADING_MODULE'); ?>
 						</th>
 						<th width="10%" class="visible-desktop">
 							<?php echo JText::_('COM_MODULES_HEADING_PAGES'); ?>

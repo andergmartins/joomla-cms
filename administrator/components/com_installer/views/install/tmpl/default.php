@@ -93,7 +93,7 @@ defined('_JEXEC') or die;
 						<input class="btn btn-primary" type="button" value="<?php echo JText::_('COM_INSTALLER_UPLOAD_AND_INSTALL'); ?>" onclick="Joomla.submitbutton()" />
 					</div>
 				</fieldset>
-		 	 </div>
+			</div>
 			<div class="tab-pane" id="directory">
 				<fieldset class="uploadform">
 					<legend><?php echo JText::_('COM_INSTALLER_INSTALL_FROM_DIRECTORY'); ?></legend>

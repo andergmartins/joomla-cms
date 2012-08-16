@@ -18,25 +18,51 @@ defined('_JEXEC') or die;
  */
 class ConfigHelperComponent
 {
+	/**
+	 * Get an array of all enabled components.
+	 *
+	 * @return  array
+	 *
+	 * @since   3.0
+	 */
 	public static function getAllComponents()
 	{
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
 		$query->select('name');
 		$query->from('#__extensions');
-		$query->where('type=' . $db->quote('component'));
-		$query->where('enabled= 1');
+		$query->where('type = ' . $db->quote('component'));
+		$query->where('enabled = 1');
 		$db->setQuery($query);
 		$result = $db->loadColumn();
 
 		return $result;
 	}
 
+	/**
+	 * Returns true if the component has configuration options.
+	 *
+	 * @param   string  $components
+	 *
+	 * @return  boolean
+	 *
+	 * @since   3.0
+	 */
 	public static function hasComponentConfig($component)
 	{
 		return is_file(JPATH_ADMINISTRATOR . '/components/' . $component . '/config.xml');
 	}
 
+	/**
+	 * Returns an array of all components with configuration options. By only
+	 * components for which the current user has 'core.manage' rights are returned.
+	 *
+	 * @param   boolean  $authCheck
+	 *
+	 * @return  array
+	 *
+	 * @since   3.0
+	 */
 	public static function getComponentsWithConfig($authCheck = true)
 	{
 		$result = array();
@@ -44,7 +70,7 @@ class ConfigHelperComponent
 		$user = JFactory::getUser();
 
 		// Remove com_config from the array as that may have weird side effects
-		$components = array_diff($components, array("com_config"));
+		$components = array_diff($components, array('com_config'));
 
 		foreach ($components as $component)
 		{
@@ -57,6 +83,15 @@ class ConfigHelperComponent
 		return $result;
 	}
 
+	/**
+	 * Load the sys language for the given component.
+	 *
+	 * @param   string  $components
+	 *
+	 * @return  void
+	 *
+	 * @since   3.0
+	 */
 	public static function loadLanguageForComponents($components)
 	{
 		$lang = JFactory::getLanguage();
@@ -67,9 +102,9 @@ class ConfigHelperComponent
 					// Load the core file then
 					// Load extension-local file.
 					$lang->load($component . '.sys', JPATH_BASE, null, false, false)
-				||	$lang->load($component . '.sys', JPATH_ADMINISTRATOR.'/components/' . $component, null, false, false)
+				||	$lang->load($component . '.sys', JPATH_ADMINISTRATOR . '/components/' . $component, null, false, false)
 				||	$lang->load($component . '.sys', JPATH_BASE, $lang->getDefault(), false, false)
-				||	$lang->load($component . '.sys', JPATH_ADMINISTRATOR.'/components/' . $component, $lang->getDefault(), false, false);
+				||	$lang->load($component . '.sys', JPATH_ADMINISTRATOR . '/components/' . $component, $lang->getDefault(), false, false);
 			}
 		}
 	}

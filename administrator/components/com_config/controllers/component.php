@@ -35,12 +35,16 @@ class ConfigControllerComponent extends JControllerLegacy
 
 	/**
 	 * Cancel operation
+	 *
+	 * @return  void
+	 *
+	 * @since   3.0
 	 */
 	function cancel()
 	{
 		// Clean the session data.
 		$app = JFactory::getApplication();
-		$app->setUserState('com_config.config.global.data',	null);
+		$app->setUserState('com_config.config.global.data', null);
 
 		$this->setRedirect('index.php');
 	}

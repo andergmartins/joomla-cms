@@ -47,7 +47,7 @@ class ModulesViewSelect extends JViewLegacy
 	/**
 	 * Add the page title and toolbar.
 	 *
-	 * @since	1.6
+	 * @since   3.0
 	 */
 	protected function addToolbar()
 	{

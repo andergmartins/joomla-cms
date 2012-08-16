@@ -35,21 +35,21 @@ $published = $this->state->get('filter.published');
 		<?php if ($published >= 0)
 		{
 		?>
-      		<div id="batch-choose-action" class="combo control-group">
-      			<label id="batch-choose-action-lbl" class="control-label" for="batch-choose-action">
-      				<?php echo JText::_('COM_MENUS_BATCH_MENU_LABEL'); ?>
-      			</label>
-      			<div class="controls">
-	      			<select name="batch[menu_id]" class="inputbox" id="batch-menu-id">
-	      				<option value=""><?php echo JText::_('JSELECT') ?></option>
-	      				<?php echo JHtml::_('select.options', JHtml::_('menu.menuitems', array('published' => $published)));?>
-	      			</select>
-      			</div>
-      		</div>
-      		<div id="batch-copy-move" class="control-group radio">
+			<div id="batch-choose-action" class="combo control-group">
+				<label id="batch-choose-action-lbl" class="control-label" for="batch-choose-action">
+					<?php echo JText::_('COM_MENUS_BATCH_MENU_LABEL'); ?>
+				</label>
+				<div class="controls">
+					<select name="batch[menu_id]" class="inputbox" id="batch-menu-id">
+						<option value=""><?php echo JText::_('JSELECT') ?></option>
+						<?php echo JHtml::_('select.options', JHtml::_('menu.menuitems', array('published' => $published)));?>
+					</select>
+				</div>
+			</div>
+			<div id="batch-copy-move" class="control-group radio">
 				<?php echo JHtml::_('select.radiolist', $options, 'batch[move_copy]', '', 'value', 'text', 'm'); ?>
-      		</div>
-      	<?php
+			</div>
+		<?php
 		}
 		?>
 	</div>

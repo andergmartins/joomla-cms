@@ -229,7 +229,9 @@ abstract class ModulesHelper
 	 * @param   string  $template  Template name
 	 * @param   string  $position  Position name
 	 *
-	 * @return  string             Return a translated position name
+	 * @return  string  Return a translated position name
+	 *
+	 * @since   3.0
 	 */
 	public static function getTranslatedModulePosition($template, $position)
 	{
@@ -265,7 +267,9 @@ abstract class ModulesHelper
 	 * @param   string  $langKey  Language file text key
 	 * @param   string  $text     The "translated" text to be checked
 	 *
-	 * @return  boolean           Return true for translated text
+	 * @return  boolean  Return true for translated text
+	 *
+	 * @since   3.0
 	 */
 	public static function isTranslatedText($langKey, $text)
 	{
@@ -278,7 +282,9 @@ abstract class ModulesHelper
 	 * @param   string  $value  The option value [optional]
 	 * @param   string  $text   The option text [optional]
 	 *
-	 * @return  object          The option as an object (stdClass instance)
+	 * @return  object  The option as an object (stdClass instance)
+	 *
+	 * @since   3.0
 	 */
 	public static function createOption($value = '', $text = '')
 	{
@@ -300,7 +306,9 @@ abstract class ModulesHelper
 	 * @param   string  $label    Value and label for group [optional]
 	 * @param   array   $options  Array of options to insert into group [optional]
 	 *
-	 * @return  array             Return the new group as an array
+	 * @return  array  Return the new group as an array
+	 *
+	 * @since   3.0
 	 */
 	public static function createOptionGroup($label = '', $options = array())
 	{

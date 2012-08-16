@@ -27,12 +27,12 @@ $menuTypes = MenusHelper::getMenuLinks();
 			<div class="controls">
 				<select id="menu-assignment" name="jform[assigned][]" multiple="multiple">
 					<?php foreach ($menuTypes as &$type) :
-						$count 	= count($type->links);
-						$i		= 0;
+						$count = count($type->links);
+						$i     = 0;
 						if ($count) :
 						?>
-				  <optgroup label="<?php echo $type->title;?>">
-					  	<?php
+						<optgroup label="<?php echo $type->title;?>">
+						<?php
 						foreach ($type->links as $link) :
 							if (trim($this->item->assignment) == '-'):
 								$selected = '';
@@ -44,11 +44,11 @@ $menuTypes = MenusHelper::getMenuLinks();
 								$selected = in_array($link->value, $this->item->assigned) ? ' selected="selected"' : '';
 							endif;
 						?>
-				    		<option value="<?php echo (int) $link->value;?>" <?php echo $selected;?>><?php echo $link->text; ?></option>
-				    <?php endforeach; ?>
-				  </optgroup>
-				 	 <?php endif; ?>
-				  <?php endforeach; ?>
+						<option value="<?php echo (int) $link->value;?>" <?php echo $selected;?>><?php echo $link->text; ?></option>
+					<?php endforeach; ?>
+				</optgroup>
+					<?php endif; ?>
+				<?php endforeach; ?>
 				</select>
 			</div>
 		</div>

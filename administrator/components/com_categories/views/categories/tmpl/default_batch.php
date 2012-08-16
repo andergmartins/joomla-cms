@@ -47,8 +47,8 @@ $extension	= $this->escape($this->state->get('filter.extension'));
 			</div>
 			<div class="control-group radio">
 				<?php echo JHtml::_('select.radiolist', $options, 'batch[move_copy]', '', 'value', 'text', 'm'); ?>
-      		</div>
-      	<?php endif; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 	<div class="modal-footer">
 		<button class="btn" type="button" onclick="document.id('batch-category-id').value='';document.id('batch-access').value='';document.id('batch-language-id').value=''" data-dismiss="modal">

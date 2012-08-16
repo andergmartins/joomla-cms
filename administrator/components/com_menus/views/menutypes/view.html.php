@@ -23,7 +23,8 @@ class MenusViewMenutypes extends JViewLegacy
 	 */
 	public function display($tpl = null)
 	{
-		$this->recordId = JRequest::getInt('recordId');
+		$input = JFactory::getApplication()->input;
+		$this->recordId = $input->getInt
 		$this->types    = $this->get('TypeOptions');
 
 		$this->addToolbar();
@@ -34,7 +35,7 @@ class MenusViewMenutypes extends JViewLegacy
 	/**
 	 * Add the page title and toolbar.
 	 *
-	 * @since	1.6
+	 * @since   3.0
 	 */
 	protected function addToolbar()
 	{
@@ -50,6 +51,5 @@ class MenusViewMenutypes extends JViewLegacy
 					<i class=\"icon-remove\" title=\"$title\"></i>
 					$title</button>";
 		$bar->appendButton('Custom', $dhtml, 'new');
-
 	}
 }

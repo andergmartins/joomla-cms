@@ -26,7 +26,7 @@ defined('_JEXEC') or die;
 					<?php else :
 						echo $user->name;
 					endif; ?>
-					
+
 					<small class="small" rel="tooltip" title="<?php echo JText::_('JCLIENT'); ?>">
 					<?php
 						if($user->client_id) {

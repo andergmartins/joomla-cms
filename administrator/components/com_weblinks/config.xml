@@ -69,7 +69,7 @@
 
 		<field name="show_description"
 	 		type="radio"
-	 		class="btn-group"
+			class="btn-group"
 	 		default="1"
 	 		label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
 	 		description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC">

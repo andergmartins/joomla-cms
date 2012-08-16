@@ -557,8 +557,8 @@ abstract class JToolbarHelper
 	 * Writes a configuration button and invokes a cancel operation (eg a checkin).
 	 *
 	 * @param   string  $component  The name of the component, eg, com_content.
-	 * @param   int     $height     The height of the popup.
-	 * @param   int     $width      The width of the popup.
+	 * @param   int     $height     The height of the popup. [UNUSED]
+	 * @param   int     $width      The width of the popup. [UNUSED]
 	 * @param   string  $alt        The name of the button.
 	 * @param   string  $path       An alternative path for the configuation xml relative to JPATH_SITE.
 	 *
@@ -566,13 +566,14 @@ abstract class JToolbarHelper
 	 *
 	 * @since   1.5
 	 */
-	public static function preferences($component, $alt = 'JToolbar_Options')
+	public static function preferences($component, $height = '550', $width = '875' $alt = 'JToolbar_Options', $path = '')
 	{
 		$component = urlencode($component);
+		$path = urlencode($path);
 		$bar = JToolBar::getInstance('toolbar');
 
 		// Add a button linking to config for component.
-		$bar->appendButton('Link', 'options', $alt, 'index.php?option=com_config&amp;view=component&amp;component='.$component);
+		$bar->appendButton('Link', 'options', $alt, 'index.php?option=com_config&amp;view=component&amp;component=' . $component . '&amp;path=' . $path);
 	}
 }
 

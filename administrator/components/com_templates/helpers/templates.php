@@ -119,12 +119,15 @@ class TemplatesHelper
 		return $data;
 	}
 
+	/**
+	 * @since   3.0
+	 */
 	public static function getPositions($clientId, $templateDir)
 	{
 		$positions = array();
 
 		$templateBaseDir = $clientId ? JPATH_ADMINISTRATOR : JPATH_SITE;
-		$filePath = JPath::clean($templateBaseDir.'/templates/'.$templateDir.'/templateDetails.xml');
+		$filePath = JPath::clean($templateBaseDir . '/templates/' . $templateDir . '/templateDetails.xml');
 
 		if (is_file($filePath))
 		{

@@ -51,7 +51,7 @@ $listDirn		= $this->escape($this->state->get('list.direction')); ?>
 				</div>
 			</div>
 			<div class="clearfix"></div>
-		
+
 			<table class="adminlist">
 				<thead>
 					<tr>

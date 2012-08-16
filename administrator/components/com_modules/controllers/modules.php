@@ -64,7 +64,7 @@ class ModulesControllerModules extends JControllerAdmin
 	/**
 	 * Method to save the submitted ordering values for records via AJAX.
 	 *
-	 * @return	void
+	 * @return  void
 	 *
 	 * @since   3.0
 	 */
@@ -72,7 +72,7 @@ class ModulesControllerModules extends JControllerAdmin
 	{
 		// Get the input
 		$input = JFactory::getApplication()->input;
-		$pks = $input->post->get('cid', array(), 'array');
+		$pks   = $input->post->get('cid', array(), 'array');
 		$order = $input->post->get('order', array(), 'array');
 
 		// Sanitize the input

@@ -28,13 +28,13 @@ $canDo = TemplatesHelper::getActions();
 <form action="<?php echo JRoute::_('index.php?option=com_templates&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="style-form" class="form-validate form-horizontal">
 	<fieldset>
 		<ul class="nav nav-tabs">
-		  <li class="active"><a href="#details" data-toggle="tab"><?php echo JText::_('JDETAILS');?></a></li>
-		  <li><a href="#options" data-toggle="tab"><?php echo JText::_('JOPTIONS');?></a></li>
-		  <?php if ($user->authorise('core.edit', 'com_menu') && $this->item->client_id == 0):?>
-		  	<?php if ($canDo->get('core.edit.state')) : ?>
-		  		<li><a href="#assignment" data-toggle="tab"><?php echo JText::_('COM_TEMPLATES_MENUS_ASSIGNMENT');?></a></li>
-		  	<?php endif; ?>
-		  <?php endif;?>
+			<li class="active"><a href="#details" data-toggle="tab"><?php echo JText::_('JDETAILS');?></a></li>
+			<li><a href="#options" data-toggle="tab"><?php echo JText::_('JOPTIONS');?></a></li>
+			<?php if ($user->authorise('core.edit', 'com_menu') && $this->item->client_id == 0):?>
+				<?php if ($canDo->get('core.edit.state')) : ?>
+						<li><a href="#assignment" data-toggle="tab"><?php echo JText::_('COM_TEMPLATES_MENUS_ASSIGNMENT');?></a></li>
+				<?php endif; ?>
+			<?php endif;?>
 		</ul>
 
 		<div class="tab-content">

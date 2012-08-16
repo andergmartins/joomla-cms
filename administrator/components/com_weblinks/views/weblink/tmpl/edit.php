@@ -37,7 +37,7 @@ JHtml::_('behavior.formvalidation');
 			?>
 			<li><a href="#params-<?php echo $name;?>" data-toggle="tab"><?php echo JText::_($fieldSet->label);?></a></li>
 			<?php endforeach; ?>
-			<?php 
+			<?php
 			$fieldSets = $this->form->getFieldsets('metadata');
 			foreach ($fieldSets as $name => $fieldSet) :
 			?>
@@ -83,7 +83,7 @@ JHtml::_('behavior.formvalidation');
 					<div class="controls"><?php echo $this->form->getInput('description'); ?></div>
 				</div>
 			</div>
-	
+
 			<div class="tab-pane" id="publishing">
 				<div class="control-group">
 					<div class="control-label"><?php echo $this->form->getLabel('created_by'); ?></div>
@@ -120,11 +120,11 @@ JHtml::_('behavior.formvalidation');
 					</div>
 				<?php endif; ?>
 			</div>
-	
+
 			<?php echo $this->loadTemplate('params'); ?>
-	
+
 			<?php echo $this->loadTemplate('metadata'); ?>
-	
+
 			<input type="hidden" name="task" value="" />
 			<?php echo JHtml::_('form.token'); ?>
 		</div>

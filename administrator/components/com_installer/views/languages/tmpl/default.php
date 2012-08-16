@@ -10,8 +10,8 @@ defined('_JEXEC') or die;
 
 JHtml::_('behavior.multiselect');
 
-$listOrder	= $this->escape($this->state->get('list.ordering'));
-$listDirn	= $this->escape($this->state->get('list.direction'));
+$listOrder = $this->escape($this->state->get('list.ordering'));
+$listDirn  = $this->escape($this->state->get('list.direction'));
 ?>
 <form
 	action="<?php echo JRoute::_('index.php?option=com_installer&view=languages');?>"

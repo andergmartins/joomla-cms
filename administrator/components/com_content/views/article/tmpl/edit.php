@@ -77,7 +77,7 @@ endif;
 				<li><a href="#metadata" data-toggle="tab"><?php echo JText::_('JGLOBAL_FIELDSET_METADATA_OPTIONS');?></a></li>
 				<?php if ($this->canDo->get('core.admin')): ?>
 					<li><a href="#permissions" data-toggle="tab"><?php echo JText::_('COM_CONTENT_FIELDSET_RULES');?></a></li>
-			 	<?php endif ?>
+				<?php endif ?>
 			</ul>
 
 			<div class="tab-content">

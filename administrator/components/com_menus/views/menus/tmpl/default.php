@@ -74,7 +74,7 @@ $modMenuId = (int) $this->get('ModMenuId');
 							<?php echo JText::_('COM_MENUS_HEADING_LINKED_MODULES'); ?>
 						</th>
 						<th width="1%">
-							<?php echo JHtml::_('grid.sort',  'JGRID_HEADING_ID', 'a.id', $listDirn, $listOrder); ?>
+							<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'a.id', $listDirn, $listOrder); ?>
 						</th>
 					</tr>
 				</thead>
@@ -87,9 +87,9 @@ $modMenuId = (int) $this->get('ModMenuId');
 				</tfoot>
 				<tbody>
 				<?php foreach ($this->items as $i => $item) :
-					$canCreate	= $user->authorise('core.create',		'com_menus');
-					$canEdit	= $user->authorise('core.edit',			'com_menus');
-					$canChange	= $user->authorise('core.edit.state',	'com_menus');
+					$canCreate = $user->authorise('core.create',     'com_menus');
+					$canEdit   = $user->authorise('core.edit',       'com_menus');
+					$canChange = $user->authorise('core.edit.state', 'com_menus');
 				?>
 					<tr class="row<?php echo $i % 2; ?>">
 						<td class="center">
@@ -126,17 +126,17 @@ $modMenuId = (int) $this->get('ModMenuId');
 								          <?php echo JText::_('COM_MENUS_MODULES') ?>
 								          <b class="caret"></b>
 								    </a>
-								    <ul class="dropdown-menu">
-								      <?php foreach ($this->modules[$item->menutype] as &$module) : ?>
-								      <li>
-								      	<?php if ($canEdit) : ?>
-								      		<a class="small modal" href="<?php echo JRoute::_('index.php?option=com_modules&task=module.edit&id='.$module->id.'&return='.$return.'&tmpl=component&layout=modal');?>" rel="{handler: 'iframe', size: {x: 1024, y: 450}, onClose: function() {window.location.reload()}}"  title="<?php echo JText::_('COM_MENUS_EDIT_MODULE_SETTINGS');?>">
-								      		<?php echo JText::sprintf('COM_MENUS_MODULE_ACCESS_POSITION', $this->escape($module->title), $this->escape($module->access_title), $this->escape($module->position)); ?></a>
-								      	<?php else :?>
-								      		<?php echo JText::sprintf('COM_MENUS_MODULE_ACCESS_POSITION', $this->escape($module->title), $this->escape($module->access_title), $this->escape($module->position)); ?>
-								      	<?php endif; ?>
-								      </li>
-								      <?php endforeach; ?>
+									<ul class="dropdown-menu">
+										<?php foreach ($this->modules[$item->menutype] as &$module) : ?>
+											<li>
+												<?php if ($canEdit) : ?>
+													<a class="small modal" href="<?php echo JRoute::_('index.php?option=com_modules&task=module.edit&id='.$module->id.'&return='.$return.'&tmpl=component&layout=modal');?>" rel="{handler: 'iframe', size: {x: 1024, y: 450}, onClose: function() {window.location.reload()}}"  title="<?php echo JText::_('COM_MENUS_EDIT_MODULE_SETTINGS');?>">
+													<?php echo JText::sprintf('COM_MENUS_MODULE_ACCESS_POSITION', $this->escape($module->title), $this->escape($module->access_title), $this->escape($module->position)); ?></a>
+												<?php else :?>
+													<?php echo JText::sprintf('COM_MENUS_MODULE_ACCESS_POSITION', $this->escape($module->title), $this->escape($module->access_title), $this->escape($module->position)); ?>
+												<?php endif; ?>
+											</li>
+										<?php endforeach; ?>
 								    </ul>
 								 </div>
 							<?php elseif ($modMenuId) : ?>
@@ -151,7 +151,7 @@ $modMenuId = (int) $this->get('ModMenuId');
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		
+
 			<div>
 				<input type="hidden" name="task" value="" />
 				<input type="hidden" name="boxchecked" value="0" />
