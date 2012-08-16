@@ -14,7 +14,7 @@ defined('JPATH_BASE') or die;
  *
  * @package     Joomla.Administrator
  * @subpackage  com_modules
- * @since       3.0
+ * @since       1.6
  */
 class JFormFieldModuleOrder extends JFormField
 {
@@ -22,7 +22,7 @@ class JFormFieldModuleOrder extends JFormField
 	 * The form field type.
 	 *
 	 * @var		string
-	 * @since	3.0
+	 * @since	1.6
 	 */
 	protected $type = 'ModuleOrder';
 
@@ -31,10 +31,11 @@ class JFormFieldModuleOrder extends JFormField
 	 *
 	 * @return	string	The field input markup.
 	 *
-	 * @since	3.0
+	 * @since	1.6
 	 */
 	protected function getInput()
 	{
+		// Initialize variables.
 		$html = array();
 		$attr = '';
 

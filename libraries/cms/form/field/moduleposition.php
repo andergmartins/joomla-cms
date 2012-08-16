@@ -16,7 +16,7 @@ JFormHelper::loadFieldClass('text');
  *
  * @package     Joomla.Administrator
  * @subpackage  com_modules
- * @since       3.0
+ * @since       1.6
  */
 class JFormFieldModulePosition extends JFormFieldText
 {
@@ -24,7 +24,7 @@ class JFormFieldModulePosition extends JFormFieldText
 	 * The form field type.
 	 *
 	 * @var		string
-	 * @since	3.0
+	 * @since	1.6
 	 */
 	protected $type = 'ModulePosition';
 
@@ -33,7 +33,7 @@ class JFormFieldModulePosition extends JFormFieldText
 	 *
 	 * @return	string	The field input markup.
 	 *
-	 * @since	3.0
+	 * @since	1.6
 	 */
 	protected function getInput()
 	{
