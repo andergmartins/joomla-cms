@@ -82,6 +82,7 @@ class ModulesModelSelect extends JModelList
 				'a.extension_id, a.name, a.element AS module'
 			)
 		);
+		$query->select('a.manifest_cache AS manifest');
 		$query->from($db->quoteName('#__extensions').' AS a');
 
 		// Filter by module
@@ -118,13 +119,6 @@ class ModulesModelSelect extends JModelList
 		// Loop through the results to add the XML metadata,
 		// and load language support.
 		foreach ($items as &$item) {
-			// Get the manifest file from installer
-			$installer = JInstaller::getInstance();
-			$manifestPath = $client->path . '/modules/' . $item->module;
-			$installer->setPath('source', $manifestPath);
-			$installer->manifest = null; // Reset manifest instance cache
-			$item->xml = $installer->getManifest();
-
 			// 1.5 Format; Core files or language packs then
 			// 1.6 3PD Extension Support
 				$lang->load($item->module.'.sys', $client->path, null, false, false)
@@ -133,7 +127,8 @@ class ModulesModelSelect extends JModelList
 			||	$lang->load($item->module.'.sys', $client->path.'/modules/'.$item->module, $lang->getDefault(), false, false);
 			$item->name	= JText::_($item->name);
 
-			if (isset($item->xml) && $text = trim($item->xml->description)) {
+			$item->manifest = json_decode($item->manifest);
+			if (isset($item->manifest) && $text = trim($item->manifest->description)) {
 				$item->desc = JText::_($text);
 			}
 			else {
@@ -141,8 +136,6 @@ class ModulesModelSelect extends JModelList
 			}
 		}
 		$items = JArrayHelper::sortObjects($items, 'name', 1, true, $lang->getLocale());
-
-		// TODO: Use the cached XML from the extensions table?
 
 		return $items;
 	}
