@@ -118,14 +118,14 @@ class ModulesModelSelect extends JModelList
 		// Loop through the results to add the XML metadata,
 		// and load language support.
 		foreach ($items as &$item) {
-			$path = JPath::clean($client->path.'/modules/'.$item->module.'/'.$item->module.'.xml');
-			if (file_exists($path)) {
-				$item->xml = simplexml_load_file($path);
-			} else {
-				$item->xml = null;
-			}
+			// Get the manifest file from installer
+			$installer = JInstaller::getInstance();
+			$manifestPath = $client->path . '/modules/' . $item->module;
+			$installer->setPath('source', $manifestPath);
+			$installer->manifest = null; // Reset manifest instance cache
+			$item->xml = $installer->getManifest();
 
-					// 1.5 Format; Core files or language packs then
+			// 1.5 Format; Core files or language packs then
 			// 1.6 3PD Extension Support
 				$lang->load($item->module.'.sys', $client->path, null, false, false)
 			||	$lang->load($item->module.'.sys', $client->path.'/modules/'.$item->module, null, false, false)
